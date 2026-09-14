@@ -1,0 +1,32 @@
+---
+export const prerender = false;
+import AppLayout from "@/layouts/AppLayout.astro";
+import { CheckoutStatus } from "@/components/payments/polar";
+import { getSession } from "@/server/auth";
+import { checkoutIdSchema } from "@/server/payment-inputs";
+import { validPayment } from "@/server/payments";
+
+const session = await getSession(Astro.request);
+if (!session) return Astro.redirect("/app");
+
+const parsed = checkoutIdSchema.safeParse(Astro.url.searchParams.get("checkout_id"));
+let initialStatus: "processing" | "error" = "error";
+let initialPaymentConfirmed = false;
+if (parsed.success) {
+  try {
+    initialPaymentConfirmed = await validPayment(Astro.request, parsed.data);
+    initialStatus = "processing";
+  } catch {
+    initialStatus = "error";
+  }
+}
+---
+
+<AppLayout>
+  <CheckoutStatus
+    checkoutId={parsed.success ? parsed.data : "invalid"}
+    initialStatus={initialStatus}
+    initialPaymentConfirmed={initialPaymentConfirmed}
+    client:load
+  />
+</AppLayout>

@@ -1,0 +1,20 @@
+---
+export const prerender = false;
+
+import BaseLayout from "./BaseLayout.astro";
+import { AppShell } from "@/components/app/app-shell";
+import { LoginIsland } from "@/components/auth/login-island";
+import { getSession } from "@/server/auth";
+
+const session = await getSession(Astro.request);
+---
+
+<BaseLayout title="Espace client | Astro Kit">
+  {session ? (
+    <AppShell currentPath={Astro.url.pathname} client:load>
+      <slot />
+    </AppShell>
+  ) : (
+    <LoginIsland client:load />
+  )}
+</BaseLayout>

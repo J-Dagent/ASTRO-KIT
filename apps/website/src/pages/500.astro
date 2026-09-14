@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Erreur serveur | Astro Kit">
+  <main class="flex min-h-screen items-center justify-center bg-background px-6 py-16 text-foreground">
+    <div class="max-w-lg space-y-6 text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Erreur 500</p>
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Une erreur est survenue</h1>
+      <p class="text-lg text-muted-foreground">
+        Le serveur n’a pas pu terminer cette demande. Réessayez dans quelques instants.
+      </p>
+      <a
+        href="/"
+        class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        Revenir à l’accueil
+      </a>
+    </div>
+  </main>
+</BaseLayout>

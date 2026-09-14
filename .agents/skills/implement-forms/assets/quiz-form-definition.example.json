@@ -1,0 +1,56 @@
+{
+  "key": "<quiz_form_key>",
+  "version": "<form_version>",
+  "pattern": "quiz",
+  "path": "/quiz",
+  "location": "hero",
+  "page": {
+    "key": "<quiz_page_key>",
+    "version": "<page_version>"
+  },
+  "conversion_event": "<conversion_event>",
+  "contact": {
+    "name_mode": "full_name",
+    "full_name": {
+      "required": true
+    },
+    "email": {
+      "required": true
+    },
+    "phone": {
+      "required": true
+    }
+  },
+  "fields": [],
+  "quiz": {
+    "quiz_key": "<quiz_key>",
+    "quiz_version": "<quiz_version>",
+    "questions": [
+      {
+        "id": "<question_id>",
+        "type": "single_choice",
+        "required": true,
+        "options": [
+          {
+            "value": "<answer_value>",
+            "label": "<display label>"
+          }
+        ]
+      }
+    ],
+    "outputs": {
+      "<output_key>": "<calculation or mapping owned by form definition>"
+    }
+  },
+  "consent": {
+    "marketing": "inherit-consent-layer",
+    "analytics": "inherit-consent-layer",
+    "explicit_fields": []
+  },
+  "attribution": {
+    "profile": "<attribution_profile>"
+  },
+  "success": {
+    "redirect_to": "<quiz_thank_you_path>"
+  }
+}

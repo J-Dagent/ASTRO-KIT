@@ -1,0 +1,29 @@
+{
+  "name": "jd-astro-kit",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "setup": "pnpm install && pnpm run build:data-ops",
+    "build:data-ops": "pnpm --filter @repo/data-ops build",
+    "dev:website": "pnpm --filter jd-astro-site dev",
+    "deploy:website": "pnpm run build:data-ops && pnpm --filter jd-astro-site deploy",
+    "dev:data-service": "pnpm --filter jd-data-service dev",
+    "deploy:data-service": "pnpm run build:data-ops && pnpm --filter jd-data-service deploy",
+    "dev": "pnpm --parallel --filter jd-astro-site --filter jd-data-service dev",
+    "build": "pnpm run build:data-ops && pnpm --filter jd-data-service build && pnpm --filter jd-astro-site build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r --if-present test",
+    "skills:sync": "node scripts/sync-agent-skills.mjs",
+    "pull-drizzle-schema": "pnpm --filter @repo/data-ops drizzle:pull",
+    "generate-auth-drizzle-schema": "pnpm --filter @repo/data-ops better-auth:generate",
+    "generate-drizzle-sql-output": "pnpm --filter @repo/data-ops drizzle:generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@types/node": "^22.18.12",
+    "typescript": "5.9.3"
+  }
+}

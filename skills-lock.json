@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "license": "not recorded by existing installation",
+      "syncedAt": "2026-08-23",
+      "computedHash": "25aacfdbee524b626418925bd083473151a617f67e4eeacec1cdd6bd1f240f58"
+    },
+    "blast-radius": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "skillPath": "pstack/skills/blast-radius/SKILL.md",
+      "commit": "46125561306434d8a1d7745d540d8932ab0cd2a2",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "b060df3ca85803eabbce9fab53f5cc024ca8d784bdde5513c1c1a784947523f8"
+    },
+    "code-review": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50"
+    },
+    "codebase-design": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/codebase-design/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2"
+    },
+    "create-prd": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/create-prd/SKILL.md",
+      "version": "2.0.0",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "c17f47f0cb85ae4abeb77bb594a4e8c123010d18cee2537cb2de8565a65129b4"
+    },
+    "cro-delivery-spec": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/cro-delivery-spec/SKILL.md",
+      "syncedAt": "2026-08-23",
+      "computedHash": "8097cf366dd5958156ad7a2031f467ea332c284e2e7f78e6fcd4d44c99fcd050"
+    },
+    "cro-experience-audit": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/cro-experience-audit/SKILL.md",
+      "syncedAt": "2026-08-23",
+      "computedHash": "acb1e06f23a81ece9f28c82c047c511d586052e405ab1fa04a885d3c7646153a"
+    },
+    "cro-web-implement": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/cro-web-implement/SKILL.md",
+      "syncedAt": "2026-08-23",
+      "computedHash": "fb76e4f44535342d4b41edfd2392a9644f3102e59866acce8d3553b5482f8abf"
+    },
+    "cro-web-validate": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/cro-web-validate/SKILL.md",
+      "syncedAt": "2026-08-23",
+      "computedHash": "b3dbfcea270b0167fdf337bad9859804a301f4174fa3444636bacc238d9068b0"
+    },
+    "diagnosing-bugs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/diagnosing-bugs/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84"
+    },
+    "domain-modeling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/domain-modeling/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e"
+    },
+    "frontend-skill": {
+      "source": "./existing project installation",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/frontend-skill/SKILL.md",
+      "license": "Apache-2.0",
+      "syncedAt": "2026-08-23",
+      "computedHash": "d367b2d22825d74c169475507e7ff109b81c1e9c20b2de3421fb19fcfbe3329b"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+    },
+    "grilling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2"
+    },
+    "implement": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement/SKILL.md",
+      "computedHash": "2139cfedf24791adbc839aaab6019cff158af1e28bfead020ec6e0ce01b3e74d"
+    },
+    "implement-forms": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/implement-forms/SKILL.md",
+      "syncedAt": "2026-08-23",
+      "computedHash": "148214e1668bdbc8132c3d59bf2dec154d0265f96dcc63209706449e234e6d50"
+    },
+    "improve": {
+      "source": "shadcn/improve",
+      "sourceType": "github",
+      "skillPath": "skills/improve/SKILL.md",
+      "commit": "03369ee6d7cafbfcecc4346539b05b3dc0a603bb",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "1599aa29e9b16424cb767779efac53fa56e3f38be92dff4ac587393a1ad5070a"
+    },
+    "improve-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/improve-animations/SKILL.md",
+      "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "68f17bbc4671593d2f43dba26a679243e2153ba5f26965fb7d59df52842534ff"
+    },
+    "improve-codebase-architecture": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75"
+    },
+    "review-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/review-animations/SKILL.md",
+      "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "61cf8ac0c4c8e1f63385298c546b16c65ca9aec34abddcd04e821c16712d671d"
+    },
+    "setup-matt-pocock-skills": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "computedHash": "552b0f48b9fe054aa93c5d432fefbd7bd9645e3f2d20b4e22432453a81800b21"
+    },
+    "shadcn": {
+      "source": "shadcn-ui/ui",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn/SKILL.md",
+      "commit": "1773ecfeeb4a04366978d353e69b5c7ded78dcb2",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "deba6c5152d9835892fa7dffeb1fedbb689ddac7e59e14e57ec5eaf9463309e4"
+    },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "computedHash": "e753a5da75292bbe59d302d89566bc2c53d0e73944da2f0e944a7578883c07d0"
+    },
+    "to-spec": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-spec/SKILL.md",
+      "computedHash": "3fa1a0695d4ea242fae9e569e4d22aa1788623197abb33bfadafae7315789bbf"
+    },
+    "to-tickets": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-tickets/SKILL.md",
+      "computedHash": "bf5e6ebcb4f1272de0c188d5b3901f265a03d1fa9935a21a7a56938e21e2e761"
+    },
+    "web-quality-audit": {
+      "source": "web-quality-skills",
+      "sourceType": "existing project installation",
+      "skillPath": ".agents/skills/web-quality-audit/SKILL.md",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "aaada64b636b867d737dfd488fd947a7ca5c280983caf3b96b8915e08ad7ef01"
+    },
+    "writing-for-agents": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/writing-for-agents/SKILL.md",
+      "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
+      "license": "MIT",
+      "syncedAt": "2026-08-23",
+      "computedHash": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+---
+export const prerender = false;
+import AppLayout from "@/layouts/AppLayout.astro";
+import { PricingPlans } from "@/components/payments/polar";
+import { getSession } from "@/server/auth";
+import { collectSubscription, getProducts } from "@/server/payments";
+
+const session = await getSession(Astro.request);
+if (!session) return Astro.redirect("/app");
+
+const [products, subscription] = await Promise.all([
+  getProducts(Astro.request),
+  collectSubscription(Astro.request),
+]);
+---
+
+<AppLayout>
+  <div class="container mx-auto py-8">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold mb-4">Choisissez votre offre</h1>
+      <p class="text-muted-foreground">Sélectionnez l’offre adaptée à vos besoins</p>
+    </div>
+    <PricingPlans products={products} subscription={subscription} client:load />
+  </div>
+</AppLayout>

@@ -1,0 +1,51 @@
+[
+  {
+    "type": "should",
+    "prompt": "Implement a /guide hero lead-magnet form in the Neon Astro Kit. Collect full name, email, phone and one client-specific qualification field; preserve the canonical attribution contract and send the canonical payload to n8n.",
+    "expect_action": "select-form-pattern"
+  },
+  {
+    "type": "should",
+    "prompt": "Implement /quiz for a business school with arbitrary question IDs and outputs, then a final contact step. Do not add quiz-specific SQL columns.",
+    "expect_action": "select-form-pattern"
+  },
+  {
+    "type": "should",
+    "prompt": "Implement /formation/msc-marketing in the Convex variant. It needs programme and campus fields, Google Ads attribution and the same n8n contract as the Neon version.",
+    "expect_action": "implement-persistence-adapter"
+  },
+  {
+    "type": "should",
+    "prompt": "Create the runtime environment plan for a Programme form whose form_key is <programme_slug>. Resolve the canonical per-form n8n webhook secret name, classify every variable as public/private/secret, and distinguish Neon from Convex requirements.",
+    "expect_action": "prepare-runtime-environment"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Add a hidden input containing the client IP and trust it for Meta CAPI.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Add campaign_id, adset_id, programme, quiz_score and every future client field as SQL columns.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "should_not",
+    "prompt": "POST the form directly from the browser to the private n8n webhook to make it faster.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Put DATABASE_URL and N8N_FORMATION_<FORM_KEY>_WEBHOOK_URL in public frontend environment variables so the form can access them.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "ambiguous",
+    "prompt": "Create the lead form for this landing page. I have not said whether it should be a Guide, Quiz, or Programme form, and the repository does not make the intended behavior clear.",
+    "expect_action": "ask_clarification"
+  }
+]

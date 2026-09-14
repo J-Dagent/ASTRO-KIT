@@ -1,0 +1,20 @@
+---
+import DocsLayout from "@/layouts/DocsLayout.astro";
+import { MarkdownDocument } from "@/components/docs/markdown-document";
+import authentication from "../../../public/docs/authentication.md?raw";
+import database from "../../../public/docs/database.md?raw";
+import polar from "../../../public/docs/polar.md?raw";
+
+const documents = { authentication, database, polar } as const;
+
+export function getStaticPaths() {
+  return ["authentication", "database", "polar"].map((name) => ({ params: { name } }));
+}
+
+const name = Astro.params.name!;
+const content = documents[name as keyof typeof documents];
+---
+
+<DocsLayout title={`${name} | Astro Kit`}>
+  <MarkdownDocument content={content} client:load />
+</DocsLayout>

@@ -1,0 +1,10 @@
+interface:
+  display_name: Create PRD
+  short_description: Create an implementation-ready PRD from conversation context and detected or provided project stack.
+policy:
+  products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
+  allow_implicit_invocation: true

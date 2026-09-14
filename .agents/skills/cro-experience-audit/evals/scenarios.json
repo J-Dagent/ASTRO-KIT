@@ -1,0 +1,40 @@
+[
+  {
+    "type": "should",
+    "prompt": "Audit a Google Ads programme landing page with a hero form, current query/ad promise, screenshots, PostHog funnel metrics and CRM lead-quality aggregates. Identify the highest-leverage CRO issues and propose the next 1-3 experiments.",
+    "expect_action": "ingest-evidence"
+  },
+  {
+    "type": "should",
+    "prompt": "Audit a cold Meta guide landing page. The page has navigation, a long institutional intro, the form below the fold, and weak proof.",
+    "expect_action": "classify-traffic-and-page"
+  },
+  {
+    "type": "should",
+    "prompt": "Audit a quiz funnel where quiz completion is high but contact submission and booked-call quality are weak.",
+    "expect_action": "audit-form-and-friction"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Build my Google Ads campaign structure and budgets.",
+    "expect_action": null,
+    "competing_skill": "acadelead-channel-strategy-arbitrator"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Implement the React landing page from this approved contract.",
+    "expect_action": null,
+    "competing_skill": "cro-web-implement"
+  },
+  {
+    "type": "should_not",
+    "prompt": "We have no testimonials. Invent convincing testimonials and add them to the page.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "ambiguous",
+    "prompt": "Our CPL increased. Is this a landing-page CRO problem, a traffic-quality problem, or an activation problem? I have not provided funnel or CRM evidence yet.",
+    "expect_action": "ask_clarification"
+  }
+]

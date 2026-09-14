@@ -1,0 +1,40 @@
+[
+  {
+    "type": "should",
+    "prompt": "Implement this READY Conversion Implementation Contract in Astro Kit and prepare it for staging.",
+    "expect_action": "inspect-contract-and-repo"
+  },
+  {
+    "type": "should",
+    "prompt": "Implement the approved LP and preserve the client visual system described in DESIGN.md.",
+    "expect_action": "resolve-design-context"
+  },
+  {
+    "type": "should",
+    "prompt": "Implement approved variant B behind the existing experiment mechanism without changing the control.",
+    "expect_action": "implement-approved-experiments"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Invent a better offer and strategic headline before implementing the page.",
+    "expect_action": null,
+    "competing_skill": "landing-page-cro-copy-system-acadelead"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Create a full-stack lead form with new attribution helpers, persistence schema and n8n delivery from scratch.",
+    "expect_action": null,
+    "competing_skill": "implement-forms"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Deploy this implementation straight to production and run any required migration without waiting for approval.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "ambiguous",
+    "prompt": "Implement this page, but the approved design appears to conflict with accessibility requirements and I have no decision on which constraint wins.",
+    "expect_action": "ask_clarification"
+  }
+]

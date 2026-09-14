@@ -1,0 +1,52 @@
+{
+  "key": "<programme_form_key>",
+  "version": "<form_version>",
+  "pattern": "programme",
+  "path": "/formation/<slug>",
+  "location": "hero",
+  "page": {
+    "key": "<programme_page_key>",
+    "version": "<page_version>"
+  },
+  "conversion_event": "<conversion_event>",
+  "contact": {
+    "name_mode": "full_name",
+    "full_name": {
+      "required": true
+    },
+    "email": {
+      "required": true
+    },
+    "phone": {
+      "required": true
+    }
+  },
+  "fields": [
+    {
+      "key": "<programme_field_key>",
+      "type": "select",
+      "required": true,
+      "purpose": "<programme selection purpose>",
+      "options": []
+    },
+    {
+      "key": "<client_field>",
+      "type": "select",
+      "required": false,
+      "purpose": "<client-specific purpose>",
+      "options": []
+    }
+  ],
+  "quiz": null,
+  "consent": {
+    "marketing": "inherit-consent-layer",
+    "analytics": "inherit-consent-layer",
+    "explicit_fields": []
+  },
+  "attribution": {
+    "profile": "<attribution_profile>"
+  },
+  "success": {
+    "redirect_to": "<programme_thank_you_path>"
+  }
+}

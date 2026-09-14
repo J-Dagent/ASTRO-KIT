@@ -1,0 +1,63 @@
+---
+import "@/styles.css";
+import "highlight.js/styles/github-dark.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  keywords?: string;
+  image?: string;
+  lang?: string;
+}
+
+const {
+  title = "Acadelead | Astro Kit moderne sur Cloudflare",
+  description = "Un starter Astro réutilisable avec React, TypeScript, Better Auth, Drizzle, Polar et Cloudflare.",
+  canonical = new URL(Astro.url.pathname, "https://www.acadelead.co/").toString(),
+  keywords,
+  image = "https://www.acadelead.co/brand/Banniere_Acadelead_LinkedIn.webp",
+  lang = "fr",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Acadelead" />
+    <link rel="canonical" href={canonical} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/favicon.ico" />
+    <script is:inline>
+      (() => {
+        try {
+          const theme = localStorage.getItem("ui-theme") || "system";
+          const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const resolved = theme === "system" ? (systemDark ? "dark" : "light") : theme;
+          document.documentElement.classList.remove("light", "dark");
+          document.documentElement.classList.add(resolved);
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

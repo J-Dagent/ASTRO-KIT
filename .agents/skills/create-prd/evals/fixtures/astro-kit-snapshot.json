@@ -1,0 +1,23 @@
+{
+  "purpose": "Behavioral fixture extracted from the user's ASTRO-KIT repository. It is test data only and must never act as a runtime default.",
+  "signals": [
+    {"path": "pnpm-workspace.yaml", "fact": "pnpm monorepo with apps/* and packages/*"},
+    {"path": "apps/website/package.json", "fact": "website uses Astro, React, Zod and Tailwind"},
+    {"path": "apps/data-service/package.json", "fact": "separate service uses Hono and runs as a Cloudflare Worker"},
+    {"path": "packages/data-ops/package.json", "fact": "shared data layer uses Drizzle ORM, Better Auth and Zod"},
+    {"path": "packages/data-ops/src/database/setup.ts", "fact": "current runtime database path uses Neon PostgreSQL through drizzle-orm/neon-http"},
+    {"path": "AGENTS.md", "fact": "repository preserves separate website, data-service and shared data-ops ownership boundaries"},
+    {"path": "apps/website/wrangler.jsonc", "fact": "website deploys to Cloudflare"},
+    {"path": "apps/data-service/wrangler.jsonc", "fact": "data service deploys to Cloudflare"}
+  ],
+  "expected_detection": {
+    "workspace": "pnpm monorepo",
+    "boundaries": ["website", "data service", "shared data layer"],
+    "frontend": ["Astro", "React"],
+    "service": ["Hono"],
+    "data": ["Drizzle ORM", "PostgreSQL", "Neon"],
+    "auth": ["Better Auth"],
+    "validation": ["Zod"],
+    "deployment": ["Cloudflare Workers"]
+  }
+}

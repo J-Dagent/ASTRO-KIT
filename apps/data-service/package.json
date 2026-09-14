@@ -1,0 +1,24 @@
+{
+  "name": "jd-data-service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "cf-typegen": "wrangler types --env-interface BaseEnv"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.19",
+    "typescript": "5.9.3",
+    "vitest": "~3.2.0",
+    "wrangler": "4.125.0"
+  },
+  "dependencies": {
+    "@repo/data-ops": "workspace:*",
+    "hono": "^4.8.3",
+    "zod": "4.4.3"
+  }
+}

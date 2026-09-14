@@ -1,0 +1,47 @@
+[
+  {
+    "type": "should",
+    "prompt": "Create a PRD for the billing portal feature. Use the stack already in this repo and write it to docs/billing-prd.md.",
+    "expect_action": "resolve-context",
+    "note": "Must inspect repository evidence instead of injecting a default stack."
+  },
+  {
+    "type": "should",
+    "prompt": "Generate a PRD for a greenfield internal approval app. Stack: Django, PostgreSQL, HTMX. No SPA.",
+    "expect_action": "resolve-context",
+    "note": "Explicit user-provided stack is the target context; no unrelated technologies may appear."
+  },
+  {
+    "type": "should",
+    "prompt": "Draft a PRD for adding organization accounts to the current product. Keep the existing stack except move authentication to our new identity provider.",
+    "expect_action": "resolve-context",
+    "note": "Must distinguish observed current state from an explicit target-state override."
+  },
+  {
+    "type": "should_not",
+    "prompt": "Implement the signup flow described in docs/PRD.md.",
+    "expect_action": null,
+    "competing_skill": "none",
+    "note": "Implementation is outside this skill."
+  },
+  {
+    "type": "should_not",
+    "prompt": "Write an ADR for why we chose PostgreSQL over SQLite.",
+    "expect_action": null,
+    "competing_skill": "domain-modeling",
+    "note": "An ADR is an architecture decision artifact, not a PRD."
+  },
+  {
+    "type": "should_not",
+    "prompt": "Give me a technical implementation plan for this feature.",
+    "expect_action": null,
+    "competing_skill": "none",
+    "note": "A plan is not a PRD unless the user explicitly asks for a PRD."
+  },
+  {
+    "type": "ambiguous",
+    "prompt": "Document this feature for the engineering team.",
+    "expect_action": "ask_clarification",
+    "note": "Ask whether the user wants a PRD/product requirements document or another artifact such as a technical spec or implementation plan."
+  }
+]

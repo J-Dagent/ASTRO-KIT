@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jd-astro-site",
+  "compatibility_date": "2025-09-02",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "vars": {
+    "MY_VAR": "Hello from Cloudflare",
+  },
+}

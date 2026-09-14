@@ -1,0 +1,105 @@
+{
+  "schema_version": "<lead_schema_version>",
+  "lead": {
+    "id": "<lead_id>",
+    "event_id": "<event_id>",
+    "submitted_at": "<server_timestamp>",
+    "form_key": "<form_key>",
+    "form_version": "<form_version>",
+    "page_key": "<page_key>",
+    "page_version": "<page_version>",
+    "conversion_event": "<conversion_event>"
+  },
+  "contact": {
+    "full_name": null,
+    "first_name": null,
+    "last_name": null,
+    "email": null,
+    "phone": null
+  },
+  "form": {
+    "location": "hero",
+    "fields": {},
+    "quiz": null
+  },
+  "attribution": {
+    "schema_version": "1.0",
+    "captured_at": null,
+    "capture_model": "session_last_non_empty",
+    "channel": null,
+    "entry": {
+      "landing_page_url": null,
+      "referrer": null
+    },
+    "utm": {
+      "source": null,
+      "medium": null,
+      "campaign": null,
+      "content": null,
+      "term": null,
+      "id": null,
+      "offer": null,
+      "persona": null,
+      "stage": null,
+      "angle": null,
+      "hook": null,
+      "format": null,
+      "country": null
+    },
+    "google": {
+      "gclid": null,
+      "gbraid": null,
+      "wbraid": null,
+      "campaign_id": null,
+      "ad_group_id": null,
+      "ad_id": null,
+      "keyword": null,
+      "match_type": null,
+      "device": null,
+      "network": null
+    },
+    "meta": {
+      "fbclid": null,
+      "fbc": null,
+      "fbp": null,
+      "campaign_id": null,
+      "ad_set_id": null,
+      "ad_id": null,
+      "placement": null,
+      "device": null
+    },
+    "tiktok": {
+      "ttclid": null,
+      "ttp": null,
+      "campaign_id": null,
+      "ad_group_id": null,
+      "ad_id": null,
+      "placement": null,
+      "device": null
+    },
+    "analytics": {
+      "posthog_distinct_id": null,
+      "posthog_session_id": null,
+      "ga_client_id": null,
+      "ga_session_id": null
+    }
+  },
+  "consent": {
+    "source": null,
+    "necessary": null,
+    "preferences": null,
+    "analytics": false,
+    "marketing": false,
+    "method": null,
+    "version": null,
+    "captured_at": null,
+    "region": null,
+    "stamp": null,
+    "parse_error": null
+  },
+  "technical": {
+    "user_agent": null,
+    "ip_hash": null,
+    "locale": null
+  }
+}

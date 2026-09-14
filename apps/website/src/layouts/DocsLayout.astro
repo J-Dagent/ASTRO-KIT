@@ -1,0 +1,17 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { NavigationIsland } from "@/components/navigation/navigation-island";
+
+interface Props {
+  title?: string;
+}
+---
+
+<BaseLayout title={Astro.props.title ?? "Documentation | Astro Kit"} lang="en">
+  <div class="min-h-screen bg-background">
+    <NavigationIsland client:load />
+    <main class="pt-16">
+      <slot />
+    </main>
+  </div>
+</BaseLayout>

@@ -1,0 +1,45 @@
+{
+  "key": "<form_key>",
+  "version": "<form_version>",
+  "pattern": "programme",
+  "path": "/formation/<slug>",
+  "location": "hero",
+  "page": {
+    "key": "<page_key>",
+    "version": "<page_version>"
+  },
+  "conversion_event": "<conversion_event>",
+  "contact": {
+    "name_mode": "full_name",
+    "full_name": {
+      "required": true
+    },
+    "email": {
+      "required": true
+    },
+    "phone": {
+      "required": true
+    }
+  },
+  "fields": [
+    {
+      "key": "<client_field>",
+      "type": "select",
+      "required": false,
+      "purpose": "<business purpose>",
+      "options": []
+    }
+  ],
+  "quiz": null,
+  "consent": {
+    "marketing": "inherit-consent-layer",
+    "analytics": "inherit-consent-layer",
+    "explicit_fields": []
+  },
+  "attribution": {
+    "profile": "<attribution_profile>"
+  },
+  "success": {
+    "redirect_to": "<thank_you_path>"
+  }
+}

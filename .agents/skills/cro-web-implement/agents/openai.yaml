@@ -1,0 +1,3 @@
+interface:
+  display_name: "CRO Web Implement"
+  short_description: "Implement approved CRO landing-page contracts in the Astro Kit."

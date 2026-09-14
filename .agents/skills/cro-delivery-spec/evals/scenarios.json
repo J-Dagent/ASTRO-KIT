@@ -1,0 +1,40 @@
+[
+  {
+    "type": "should",
+    "prompt": "Turn this approved CRO audit and approved LP copy into a build-ready implementation contract for the Astro Kit.",
+    "expect_action": "ingest-approved-decision"
+  },
+  {
+    "type": "should",
+    "prompt": "The approved change is to move the programme form into the hero and collect programme, campus, email and phone while preserving attribution. Produce the delivery spec.",
+    "expect_action": "define-form-requirements"
+  },
+  {
+    "type": "should",
+    "prompt": "Prepare the implementation contract. A DESIGN.md exists in the client repo.",
+    "expect_action": "resolve-design-context"
+  },
+  {
+    "type": "should_not",
+    "prompt": "We have not chosen the offer or CTA. Invent them and finalize the implementation contract anyway.",
+    "expect_action": null,
+    "competing_skill": "landing-page-cro-copy-system-acadelead"
+  },
+  {
+    "type": "should_not",
+    "prompt": "Implement this page and commit it.",
+    "expect_action": null,
+    "competing_skill": "cro-web-implement"
+  },
+  {
+    "type": "should_not",
+    "prompt": "No tracking plan exists. Choose our Google and Meta conversion taxonomy and business success criteria yourself.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "ambiguous",
+    "prompt": "The copy is approved, but I cannot tell whether the form fields and conversion event are approved or still draft. Prepare the delivery contract.",
+    "expect_action": "ask_clarification"
+  }
+]

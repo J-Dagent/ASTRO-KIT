@@ -1,0 +1,40 @@
+[
+  {
+    "type": "should",
+    "prompt": "Validate this PR against the approved Conversion Implementation Contract before staging.",
+    "expect_action": "load-expected-contract"
+  },
+  {
+    "type": "should",
+    "prompt": "QA a new programme hero form with Google attribution, Neon persistence and n8n delivery.",
+    "expect_action": "check-form-pipeline"
+  },
+  {
+    "type": "should",
+    "prompt": "Validate visual fidelity against DESIGN.md and the approved contract.",
+    "expect_action": "check-runtime-experience"
+  },
+  {
+    "type": "should_not",
+    "prompt": "The page looks good and submits correctly. Declare the CRO experiment winner.",
+    "expect_action": null,
+    "competing_skill": "funnel-cro-experiment-operator-acadelead"
+  },
+  {
+    "type": "should_not",
+    "prompt": "While validating, rewrite the strategic headline and restructure the offer to improve conversion.",
+    "expect_action": null,
+    "competing_skill": "landing-page-cro-copy-system-acadelead"
+  },
+  {
+    "type": "should_not",
+    "prompt": "n8n returned 200, so certify that Google, Meta and TikTok all received the conversion.",
+    "expect_action": null,
+    "competing_skill": "none"
+  },
+  {
+    "type": "ambiguous",
+    "prompt": "Everything builds, but authenticated GTM and ad-platform verification cannot run and I do not know whether credentials are available to this environment.",
+    "expect_action": "ask_clarification"
+  }
+]
