@@ -50,6 +50,6 @@
     "mysql2": "^3.14.3",
     "postgres": "^3.4.7",
     "tsc-alias": "^1.8.16",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   }
 }
