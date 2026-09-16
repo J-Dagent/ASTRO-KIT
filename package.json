@@ -6,7 +6,7 @@
     "setup": "pnpm install && pnpm run build:data-ops",
     "build:data-ops": "pnpm --filter @repo/data-ops build",
     "dev:website": "pnpm --filter jd-astro-site dev",
-    "deploy:website": "pnpm run build:data-ops && pnpm --filter jd-astro-site deploy",
+    "deploy:website": "pnpm run build:data-ops && pnpm --filter jd-astro-site run deploy",
     "dev:data-service": "pnpm --filter jd-data-service dev",
     "deploy:data-service": "pnpm run build:data-ops && pnpm --filter jd-data-service deploy",
     "dev": "pnpm --parallel --filter jd-astro-site --filter jd-data-service dev",
