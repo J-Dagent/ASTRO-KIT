@@ -71,7 +71,13 @@ Use the lightest reliable tool.
 
 ## Documents and PDFs
 
-Use `anydoc` for supported document conversion and creation workflows. For local PDF inspection, run `detect-pdf "<file>" --json`, then use `pdf2md "<file>" --compact` for text-bearing PDFs. Report OCR requirements for scanned pages. Use visual page inspection for charts, diagrams, or layout; use `pdftotext` only as a fallback.
+Use the `anydoc` skill for ordinary text extraction from supported documents, including text-readable PDFs. For large documents, write Markdown to disk and read only the relevant sections.
+
+Use the `pdf-inspector` skill for PDF classification, scanned or mixed detection, OCR diagnosis, or incomplete extraction. Prefer structured classification, compact Markdown, and page selection when they reduce unnecessary context.
+
+Do not classify every PDF before ordinary AnyDoc conversion. Use `pdftotext` only as a plain-text fallback when the normal document tools fail.
+
+Use visual page inspection when the task depends on images, charts, diagrams, or layout. Prefer local parsing and OCR by default.
 
 ## Task Delegation
 
