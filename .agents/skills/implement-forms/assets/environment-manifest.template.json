@@ -1,12 +1,13 @@
 {
-  "backend_mode": "<neon|convex>",
-  "trusted_intake": "<cloudflare_astro|convex_http_action|existing_server_boundary>",
-  "delivery_owner": "<n8n|direct_server|mixed>",
+  "framework_runtime": "<detected_framework_or_runtime>",
+  "backend_mode": "<postgres|convex>",
+  "trusted_intake": "<existing_trusted_boundary>",
+  "delivery_owner": "<existing_service|application_server|backend_function|automation|none|mixed>",
   "required_configuration": [
     {
-      "name": "<VARIABLE_NAME>",
+      "name": "<CONFIG_NAME>",
       "classification": "<public|private|secret>",
-      "location": "<browser_public_runtime|cloudflare_worker|convex_deployment|ci|n8n_credentials>",
+      "location": "<existing_runtime_or_secret_store>",
       "required_when": "<condition>",
       "status": "<present|missing|not_applicable>",
       "reason": "<reason>"
@@ -14,18 +15,18 @@
   ],
   "new_configuration": [
     {
-      "name": "<VARIABLE_NAME>",
+      "name": "<CONFIG_NAME>",
       "classification": "<public|private|secret>",
       "location": "<location>",
       "reason": "<reason>",
       "write_requires_approval": true
     }
   ],
-  "n8n_webhook": {
-    "resolved_secret_name": "<N8N_GUIDE_WEBHOOK_URL|N8N_QUIZ_WEBHOOK_URL|N8N_FORMATION_<FORM_KEY>_WEBHOOK_URL|N8N_<FORM_KEY>_WEBHOOK_URL>",
+  "delivery": {
+    "adapter": "<existing_adapter|none>",
+    "resolved_secret_name": null,
     "status": "<present|missing|not_applicable>",
     "write_requires_approval": true
   },
-  "form_specific_n8n_webhook_required": "<true|false>",
   "notes": []
 }

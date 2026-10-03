@@ -2,39 +2,36 @@
   {
     "type": "should",
     "prompt": "Validate this PR against the approved Conversion Implementation Contract before staging.",
-    "expect_action": "load-expected-contract"
+    "expect_behavior": "contract_fidelity_and_runtime_qa"
   },
   {
     "type": "should",
-    "prompt": "QA a new programme hero form with Google attribution, Neon persistence and n8n delivery.",
-    "expect_action": "check-form-pipeline"
+    "prompt": "QA a new hero lead form with attribution, the repository's configured persistence, and its delivery integration.",
+    "expect_behavior": "compose_form_validation"
   },
   {
     "type": "should",
-    "prompt": "Validate visual fidelity against DESIGN.md and the approved contract.",
-    "expect_action": "check-runtime-experience"
+    "prompt": "Validate visual fidelity against the repository's design system and the approved contract.",
+    "expect_behavior": "runtime_visual_validation"
   },
   {
     "type": "should_not",
     "prompt": "The page looks good and submits correctly. Declare the CRO experiment winner.",
-    "expect_action": null,
-    "competing_skill": "funnel-cro-experiment-operator-acadelead"
+    "expect_behavior": "do_not_declare_business_winner"
   },
   {
     "type": "should_not",
     "prompt": "While validating, rewrite the strategic headline and restructure the offer to improve conversion.",
-    "expect_action": null,
-    "competing_skill": "landing-page-cro-copy-system-acadelead"
+    "expect_behavior": "do_not_rewrite_strategy"
   },
   {
     "type": "should_not",
-    "prompt": "n8n returned 200, so certify that Google, Meta and TikTok all received the conversion.",
-    "expect_action": null,
-    "competing_skill": "none"
+    "prompt": "The delivery webhook returned 200, so certify that every downstream advertising platform received the conversion.",
+    "expect_behavior": "require_external_receipt_evidence"
   },
   {
     "type": "ambiguous",
-    "prompt": "Everything builds, but authenticated GTM and ad-platform verification cannot run and I do not know whether credentials are available to this environment.",
-    "expect_action": "ask_clarification"
+    "prompt": "Everything builds, but authenticated tag-manager and ad-platform verification cannot run and credentials may not be available in this environment.",
+    "expect_behavior": "pass_with_external_verification_or_needs_evidence"
   }
 ]

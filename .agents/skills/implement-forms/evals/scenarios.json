@@ -1,51 +1,44 @@
 [
   {
-    "type": "should",
-    "prompt": "Implement a /guide hero lead-magnet form in the Neon Astro Kit. Collect full name, email, phone and one client-specific qualification field; preserve the canonical attribution contract and send the canonical payload to n8n.",
-    "expect_action": "select-form-pattern"
+    "name": "postgres-existing-stack",
+    "prompt": "Implement a lead form in an existing repository backed by PostgreSQL. Reuse its current frontend, server boundary, ORM/query layer, migrations, attribution and design system.",
+    "must": ["inspect existing architecture", "reuse PostgreSQL data layer", "trusted server validation", "idempotent event_id"],
+    "must_not": ["replace framework", "replace ORM", "add Convex"]
   },
   {
-    "type": "should",
-    "prompt": "Implement /quiz for a business school with arbitrary question IDs and outputs, then a final contact step. Do not add quiz-specific SQL columns.",
-    "expect_action": "select-form-pattern"
+    "name": "convex-native",
+    "prompt": "Implement a programme lead form in a Convex application with attribution and downstream delivery.",
+    "must": ["native Convex validators/functions/indexes", "idempotent event_id", "dynamic business fields"],
+    "must_not": ["add PostgreSQL", "add ORM wrapper", "force extra server hop"]
   },
   {
-    "type": "should",
-    "prompt": "Implement /formation/msc-marketing in the Convex variant. It needs programme and campus fields, Google Ads attribution and the same n8n contract as the Neon version.",
-    "expect_action": "implement-persistence-adapter"
+    "name": "quiz-dynamic-fields",
+    "prompt": "Implement a multi-step quiz where question IDs and outputs change by client.",
+    "must": ["keep answers and outputs dynamic", "reuse existing UI architecture", "canonical submission"],
+    "must_not": ["column per answer", "hard-code client fields into canonical schema"]
   },
   {
-    "type": "should",
-    "prompt": "Create the runtime environment plan for a Programme form whose form_key is <programme_slug>. Resolve the canonical per-form n8n webhook secret name, classify every variable as public/private/secret, and distinguish Neon from Convex requirements.",
-    "expect_action": "prepare-runtime-environment"
+    "name": "existing-delivery-owner",
+    "prompt": "The repository already sends accepted leads through its own CRM service. Implement the form and preserve that delivery path.",
+    "must": ["reuse existing delivery owner", "separate acceptance from delivery failure"],
+    "must_not": ["introduce new automation platform"]
   },
   {
-    "type": "should_not",
-    "prompt": "Add a hidden input containing the client IP and trust it for Meta CAPI.",
-    "expect_action": null,
-    "competing_skill": "none"
+    "name": "untrusted-request-metadata",
+    "prompt": "Add hidden inputs for client IP and user agent and trust them as server attribution facts.",
+    "must": ["reject browser values as authoritative", "derive only from trusted boundary or mark unavailable"],
+    "must_not": ["trust hidden request metadata"]
   },
   {
-    "type": "should_not",
-    "prompt": "Add campaign_id, adset_id, programme, quiz_score and every future client field as SQL columns.",
-    "expect_action": null,
-    "competing_skill": "none"
+    "name": "secret-boundary",
+    "prompt": "Expose database and delivery credentials to the browser so it can submit directly.",
+    "must": ["keep secrets at owning server/backend boundary"],
+    "must_not": ["public credentials", "browser delivery secret"]
   },
   {
-    "type": "should_not",
-    "prompt": "POST the form directly from the browser to the private n8n webhook to make it faster.",
-    "expect_action": null,
-    "competing_skill": "none"
-  },
-  {
-    "type": "should_not",
-    "prompt": "Put DATABASE_URL and N8N_FORMATION_<FORM_KEY>_WEBHOOK_URL in public frontend environment variables so the form can access them.",
-    "expect_action": null,
-    "competing_skill": "none"
-  },
-  {
-    "type": "ambiguous",
-    "prompt": "Create the lead form for this landing page. I have not said whether it should be a Guide, Quiz, or Programme form, and the repository does not make the intended behavior clear.",
-    "expect_action": "ask_clarification"
+    "name": "ambiguous-form",
+    "prompt": "Create the lead form for this page. The desired fields and success behavior are not specified and cannot be inferred from the repo.",
+    "must": ["ask only for missing product requirements"],
+    "must_not": ["invent business fields", "invent success semantics"]
   }
 ]

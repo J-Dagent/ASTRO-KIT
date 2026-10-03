@@ -1,40 +1,39 @@
 ---
 name: cro-delivery-spec
-description: Turn an approved CRO decision, PRD/spec, copy, measurement requirements, and repository context into a deterministic Conversion Implementation Contract for Codex/Web Experience delivery. Use after CRO strategy is aligned and before coding, especially for LP changes, experiments, forms, tracking, or integrations. Do NOT use to invent strategy, choose unowned measurement decisions, implement code, or deploy.
+description: Convert an approved CRO decision, copy, measurement requirements, and repository context into a deterministic Conversion Implementation Contract before coding. Use when strategy is already owned and implementation needs exact surfaces, form requirements, acceptance criteria, evidence status, and rollback. Do not invent strategy, choose unowned measurement decisions, implement code, or deploy.
 ---
 
-# Cro Delivery Spec
+# CRO Delivery Spec
 
-## Action router
+## Workflow
 
-| # | Action | Role |
-|---|---|---|
-| 01 | `ingest-approved-decision` | Collect already-approved strategy, audit decisions, copy, evidence and project context. |
-| 02 | `readiness-gate` | Verify every implementation-critical decision has an owner and status. |
-| 03 | `map-change-surfaces` | Map the approved change to web, form, tracking, integration, backend and external-system surfaces. |
-| 04 | `define-form-requirements` | When a form is in scope, produce only the business/behavioral requirements that `implement-forms` needs. |
-| 05 | `resolve-design-context` | Record optional DESIGN.md or existing design-system constraints without coupling data behavior to design tooling. |
-| 06 | `define-acceptance-and-rollback` | Turn decisions into observable acceptance criteria and rollback conditions. |
-| 07 | `emit-contract` | Emit the versioned Conversion Implementation Contract using the bundled template. |
-| 08 | `validate-contract` | Validate structural completeness and inherited evidence status before handoff. |
+1. Read the approved audit, copy/spec, measurement decisions, and repository evidence. Reuse settled decisions instead of re-interviewing.
+2. Assign `READY`, `NEEDS_EVIDENCE`, `UNKNOWN`, or `BLOCKED` per implementation-critical surface. The weakest unresolved dependency controls that surface.
+3. Map approved changes to page, form, measurement, backend/integration, external-system, and design surfaces without prescribing code.
+4. If a form is in scope, emit business/behavior requirements only and hand full-stack form implementation to `implement-forms`.
+5. Capture existing design-system constraints only when they affect the approved experience. Missing optional design docs are not blockers.
+6. Turn every approved decision into observable acceptance criteria. Add rollback and human gates where risk requires them.
+7. Fill `assets/conversion-implementation-contract.template.json`, then run `node scripts/validate-contract.mjs <contract.json>`.
 
-## Default flow
+## Invariants
 
-Use the minimum actions required by the request. For a new end-to-end task, follow the table order unless repository evidence justifies skipping an action. Open only the references required for the active action.
-
-## Transversal rules
-
-- Synthesize what is already decided; do not restart the interview.
-- Inherit READY/NEEDS_EVIDENCE/UNKNOWN/BLOCKED status and never fill weak evidence by assumption.
-- Keep strategy and Measurement ownership upstream; this skill specifies implementation, acceptance and rollback.
-- When forms are involved, emit Form Requirements and route full-stack form behavior to implement-forms.
+- Upstream owns audience, offer, approved copy/proof, CRO hypothesis, measurement taxonomy, and business success rules.
+- This skill owns implementation requirements, affected surfaces, evidence status, acceptance criteria, and rollback.
+- Never promote weak evidence to `READY` by assumption.
+- Preserve stable decision, experiment, event, page, and form identities supplied upstream.
+- A `READY` surface cannot contain blockers or implementation-critical unknowns.
+- Keep forms persistence-agnostic here. `implement-forms` owns canonical submission and persistence behavior.
+- Stop before code or deployment.
 
 ## References
 
-- `references/contract-boundary.md`
-- `references/form-handoff.md`
-- Default asset/template: `assets/conversion-implementation-contract.template.json`
+- Read `references/contract.md` for ownership, statuses, surfaces, risk, acceptance, and rollback.
+- Read `references/forms.md` only when a form is in scope.
+
+## Output
+
+Return one versioned Conversion Implementation Contract plus explicit blockers. Do not hide unresolved decisions in prose.
 
 ## Validation
 
-Every action contains a concrete `## Test`. Before declaring completion, run the relevant executable checks and evaluate the scenarios in `evals/scenarios.json`.
+Run the contract validator and `node scripts/validate-skill.mjs`. Evaluate the routing scenarios in `evals/scenarios.json` before handoff.

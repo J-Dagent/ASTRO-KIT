@@ -1,38 +1,38 @@
 ---
 name: cro-web-validate
-description: Validate an implemented Acadelead CRO landing page against its approved Conversion Implementation Contract before staging, including contract fidelity, runtime UX, form pipeline, measurement implementation, performance/accessibility, and code quality. Use for CRO QA, PR validation, pre-staging checks, and external-verification gap reporting. Do NOT use to rewrite strategy, declare the business experiment winner, or infer media-platform receipt without evidence.
+description: Validate an implemented CRO web change against its approved Conversion Implementation Contract before staging. Use for contract fidelity, runtime UX, form-pipeline integration, technical measurement delivery, accessibility/performance checks, code quality, and external-verification gaps. Do not rewrite strategy, optimize by taste, declare the CRO experiment winner, or infer external platform receipt without evidence.
 ---
 
-# Cro Web Validate
+# CRO Web Validate
 
-## Action router
+## Workflow
 
-| # | Action | Role |
-|---|---|---|
-| 01 | `load-expected-contract` | Load the approved contract and determine which evidence is required to validate it. |
-| 02 | `check-contract-fidelity` | Compare actual implementation to approved copy, CTA, structure, proof, form, experiment and must-preserve constraints. |
-| 03 | `check-runtime-experience` | Validate responsive behavior, navigation/CTA behavior, accessibility basics and success routes in a real browser when possible. |
-| 04 | `check-form-pipeline` | Invoke/compose `implement-forms` validation for any form in scope. |
-| 05 | `check-measurement-implementation` | Verify the specified events/IDs are technically emitted and routed, while keeping Measurement QA ownership separate. |
-| 06 | `check-quality-specialists` | Use web-quality-audit, code-review and blast-radius when their domains are in scope. |
-| 07 | `emit-verdict` | Emit one bounded verdict with evidence, owner and retest condition for every failure. |
+1. Load the exact approved contract and current implementation. Build checks only for affected surfaces and preserve unresolved evidence status.
+2. Compare approved vs actual copy, CTA, proof, structure, form behavior, experiments, and `must_preserve` / `must_not_change` constraints.
+3. Discover and run the repository's relevant test/build/preview path. Exercise real runtime behavior in a browser when possible, including responsive, keyboard, validation, error, and success paths.
+4. When forms are in scope, compose with `implement-forms` validation when available. Otherwise validate against the canonical form artifacts supplied by implementation; do not invent a second schema.
+5. Verify specified event names/IDs and technical emission/routing. Separate technical delivery from upstream Measurement QA and from external destination receipt.
+6. Use available specialist tooling by capability for accessibility/performance, code review, browser/runtime, and risk analysis. Merge evidence without duplicating those domains.
+7. Emit exactly one bounded verdict and attach owner, evidence, remediation or missing evidence, and retest condition for every failure.
 
-## Default flow
+## Invariants
 
-Use the minimum actions required by the request. For a new end-to-end task, follow the table order unless repository evidence justifies skipping an action. Open only the references required for the active action.
-
-## Transversal rules
-
-- Compare expected contract to actual implementation; do not optimize by taste while validating.
-- Compose with implement-forms for form/data QA and existing specialist skills for browser, web-quality and code review.
-- Keep Measurement QA (right thing) separate from Technical QA (works reliably).
-- Report external credential/platform gaps explicitly rather than fabricating a pass.
+- Validate expected contract against actual behavior. Do not improve the design while pretending to validate it.
+- Technical QA asks whether implementation works reliably; Measurement QA asks whether the right thing was specified.
+- A successful local handler, webhook, or HTTP response does not prove an external destination received or accepted the event.
+- A build/runtime pass does not make a CRO experiment the business winner.
+- External credential or platform gaps stay explicit; never fabricate a full pass.
+- Use the repository's own architecture and commands. Do not require a particular framework, persistence provider, delivery tool, or browser tool.
 
 ## References
 
-- `references/qa-matrix.md`
-- `references/verdicts.md`
+- `references/qa.md` for validation seams and evidence rules.
+- `references/verdicts.md` for allowed final states.
+
+## Output
+
+When a machine-readable handoff is useful, copy `assets/validation-report.template.json` and validate it with `node scripts/validate-report.mjs <report.json>`.
 
 ## Validation
 
-Every action contains a concrete `## Test`. Before declaring completion, run the relevant executable checks and evaluate the scenarios in `evals/scenarios.json`.
+Run `node scripts/validate-skill.mjs`, repository-native checks, relevant runtime checks, and the scenarios in `evals/scenarios.json`.

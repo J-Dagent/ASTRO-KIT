@@ -1,61 +1,41 @@
 ---
 name: implement-forms
-description: Implement and validate client-agnostic full-stack lead forms for Guide/lead-magnet, dynamic Quiz, and Formation/Programme landing pages in Astro, with flexible React UI but strict canonical collection, attribution, consent, server validation, Neon/Drizzle or Convex persistence, runtime environment/secrets planning, n8n delivery, and conversion tracking. Use when creating, adapting, migrating, or debugging a client lead form. Do NOT use to decide marketing strategy, invent measurement taxonomy, hard-code client quiz/business fields into the database, expose secrets, or send private webhooks directly from the browser.
+description: Implement or migrate production lead forms inside an existing repository. Use for contact, guide, quiz, programme, or similar capture flows that need attribution, consent, persistence, delivery, or conversion tracking. Inspect and reuse the repo's frontend, trusted server boundary, backend, persistence layer, and delivery path. Supports PostgreSQL through the existing data layer and Convex through native functions. Enforce FormDefinition, CanonicalLeadSubmission, idempotency, trusted request metadata, and secret boundaries.
 ---
 
-# Implement Forms
+# Implement forms
 
-## Action router
+Build the form inside the repository's existing architecture. Do not introduce a new stack unless the task requires it.
 
-| # | Action | Role |
-|---|---|---|
-| 01 | `inspect-repo-and-form-context` | Inspect AGENTS.md, form/tracking/server/data seams, backend variant, runtime boundary and legacy contracts before deciding implementation. |
-| 02 | `select-form-pattern` | Select Guide, Quiz, or Programme/Formation based on the approved path/behavior, without imposing visual structure. |
-| 03 | `build-form-definition` | Create the versioned FormDefinition with contact mode, dynamic fields, quiz config, consent, attribution and success behavior. |
-| 04 | `implement-flexible-ui` | Implement or reuse Astro components and React islands for the selected pattern while respecting design context and existing conventions. |
-| 05 | `implement-attribution-and-consent` | Implement canonical session attribution, vendor/cookie capture and consent recapture at submit. |
-| 06 | `implement-server-submission` | Implement the trusted server intake: revalidation, normalization, request enrichment, idempotency mapping and canonical payload construction. |
-| 07 | `implement-persistence-adapter` | Persist the same logical contract through Neon/Drizzle or Convex according to repository evidence. |
-| 08 | `prepare-runtime-environment` | Produce the public/private/secret Environment Delta for Cloudflare, Neon or Convex, n8n and any approved direct integrations. |
-| 09 | `wire-n8n-and-browser-tracking` | Send the canonical server payload to n8n, record delivery state, and emit browser conversion only after persistence success. |
-| 10 | `validate-form-pipeline` | Run deterministic contract checks plus E2E cases for fields, attribution, consent, environment readiness, idempotency, backend and delivery semantics. |
+Prefer repository evidence over remembered framework conventions.
+Use the bundled templates and validators as the source of truth for exact contract shape.
+If a product requirement cannot be inferred, ask only for that missing requirement.
 
-## Default flow
+## Process
 
-Use the minimum actions required by the request. For a new end-to-end task, follow the table order unless repository evidence justifies skipping an action. Open only the references required for the active action.
+1. **Inspect.** Read repo instructions, manifests, framework/runtime config, existing forms, server/backend code, persistence, tracking, and deployment config. Finish when frontend, trusted intake, persistence, delivery, and environment ownership are identified or explicitly absent.
+2. **Define.** Reuse an existing form contract or start from `assets/form-definition.template.json`. Keep form/page identity and versions explicit. Finish when contact fields, dynamic fields, consent, attribution, conversion event, and success behavior are known.
+3. **Implement UI.** Reuse the repo's components, validation conventions, accessibility patterns, and submit states. Keep client-specific business fields dynamic. Finish when the intended interaction works without changing the design system unnecessarily.
+4. **Implement intake.** Revalidate at the trusted server boundary, normalize contact data, derive request metadata only from trusted context, create `event_id`, and build `CanonicalLeadSubmission`. Finish when browser-controlled metadata cannot overwrite server-derived facts.
+5. **Persist.** Use the detected backend. PostgreSQL must reuse the existing ORM/query/migration path. Convex must use native schema, validators, functions, and indexes. Finish when retries with the same `event_id` cannot create duplicate accepted submissions.
+6. **Deliver.** Reuse the approved delivery owner if one exists. Keep acceptance/persistence failure separate from downstream delivery failure unless the repo already defines another contract. Fire browser conversion only after the approved success condition. Finish when duplicate `event_id` cannot duplicate downstream effects.
+7. **Validate.** Run the contract validators, the skill structure validator, relevant repo tests/typecheck, and review `evals/scenarios.json`. Finish only when checks pass or remaining blockers are explicit.
 
-## Transversal rules
+## Invariants
 
-- Keep frontend/component structure flexible; keep backend/data/environment contracts strict.
-- Use one canonical FormDefinition and CanonicalLeadSubmission across Neon and Convex.
-- Keep form/page identity in versioned configuration, and derive the required n8n webhook secret name deterministically from the form pattern/key.
-- Use form-specific n8n webhook secrets: `N8N_GUIDE_WEBHOOK_URL`, `N8N_QUIZ_WEBHOOK_URL`, `N8N_FORMATION_<FORM_KEY>_WEBHOOK_URL`, or `N8N_<FORM_KEY>_WEBHOOK_URL` for other form families.
-- Never trust hidden inputs for attribution or client-supplied IP as authoritative.
-- Persist first, then server-side n8n delivery; browser conversion fires only after persistence success unless an approved contract changes semantics.
-- Keep client-specific business/quiz data dynamic in payload_json/form objects.
-- For Neon, use PostgreSQL + Drizzle and real migrations; do not carry SQL patterns into Convex.
-- For Convex, use validated documents/functions/indexes and Convex deployment environment practices; do not emulate relational SQL architecture.
-- Keep Google/Meta/TikTok/Airtable credentials in n8n credentials by default when n8n owns delivery.
-- Never print, commit, or expose secret values.
-- Do not modify `.env` files, secret stores, deploy, or run DB migrations without explicit approval.
+- `FormDefinition` is versioned configuration, not a database schema.
+- `CanonicalLeadSubmission` is the stable submission contract across backends and delivery adapters.
+- Attribution and consent are captured explicitly and revalidated at submit where applicable.
+- Request-derived facts such as authoritative IP or user agent come only from a trusted server boundary.
+- `event_id` is the idempotency key across persistence and downstream delivery.
+- Client-specific fields and quiz outputs stay dynamic unless the domain model proves they are canonical.
+- Secrets never enter browser bundles, payload templates, logs, or committed files.
+- Do not edit secret stores, deploy, or run production migrations without explicit approval.
 
-## References
+## Read when needed
 
-- `references/form-patterns.md`
-- `references/observed-form-architecture.md`
-- `references/canonical-form-contract.md`
-- `references/canonical-lead-contract.md`
-- `references/attribution-contract.md`
-- `references/server-pipeline.md`
-- `references/neon-adapter.md`
-- `references/convex-adapter.md`
-- `references/n8n-contract.md`
-- `references/design-boundary.md`
-- `references/astro-kit-integration.md`
-- `references/environment-contract.md`
-- Default form asset: `assets/form-definition.template.json`
-- Environment output asset: `assets/environment-manifest.template.json`
-
-## Validation
-
-Every action contains a concrete `## Test`. Before declaring completion, run the relevant executable checks and evaluate the scenarios in `evals/scenarios.json`.
+- Data shape and form semantics: `references/contracts.md`
+- Framework/runtime integration and trusted boundary: `references/repository-integration.md`
+- PostgreSQL or Convex persistence: `references/persistence.md`
+- Delivery and conversion semantics: `references/delivery.md`
+- Runtime configuration and secrets: `references/environment.md`

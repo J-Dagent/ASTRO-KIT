@@ -1,5 +1,5 @@
 {
-  "schema_version": "<conversion_contract_schema_version>",
+  "schema_version": "1.0",
   "status": "READY",
   "identity": {
     "request_id": null,
@@ -23,7 +23,7 @@
     "integrations": []
   },
   "design": {
-    "design_md_path": null,
+    "reference": null,
     "hard_constraints": []
   },
   "measurement": {
@@ -36,11 +36,12 @@
     "must_preserve": [],
     "must_not_change": [],
     "risk": "low",
-    "rollback": null
+    "rollback": null,
+    "human_gates": []
   },
   "form_requirements": null,
   "acceptance_criteria": [
-    "<observable acceptance criterion>"
+    "observable acceptance criterion"
   ],
   "evidence": [],
   "blockers": []

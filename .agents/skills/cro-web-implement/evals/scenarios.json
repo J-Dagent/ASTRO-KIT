@@ -1,40 +1,42 @@
 [
   {
     "type": "should",
-    "prompt": "Implement this READY Conversion Implementation Contract in Astro Kit and prepare it for staging.",
-    "expect_action": "inspect-contract-and-repo"
+    "prompt": "Implement this READY Conversion Implementation Contract in the existing Next.js repository and prepare it for staging without changing the app architecture.",
+    "expect_behavior": "inspect_and_reuse_repo"
   },
   {
     "type": "should",
-    "prompt": "Implement the approved LP and preserve the client visual system described in DESIGN.md.",
-    "expect_action": "resolve-design-context"
+    "prompt": "Implement the approved landing page in this SvelteKit repo and preserve its existing component and styling system.",
+    "expect_behavior": "framework_agnostic_implementation"
   },
   {
     "type": "should",
     "prompt": "Implement approved variant B behind the existing experiment mechanism without changing the control.",
-    "expect_action": "implement-approved-experiments"
+    "expect_behavior": "preserve_experiment_identity"
+  },
+  {
+    "type": "should",
+    "prompt": "This server-rendered site has no React. Implement the approved CRO section without introducing React.",
+    "expect_behavior": "preserve_rendering_model"
   },
   {
     "type": "should_not",
     "prompt": "Invent a better offer and strategic headline before implementing the page.",
-    "expect_action": null,
-    "competing_skill": "landing-page-cro-copy-system-acadelead"
+    "expect_behavior": "do_not_rewrite_strategy"
   },
   {
     "type": "should_not",
-    "prompt": "Create a full-stack lead form with new attribution helpers, persistence schema and n8n delivery from scratch.",
-    "expect_action": null,
-    "competing_skill": "implement-forms"
+    "prompt": "Create a full-stack lead form with new attribution helpers, persistence schema and delivery plumbing from scratch.",
+    "expect_behavior": "route_to_implement_forms"
   },
   {
     "type": "should_not",
-    "prompt": "Deploy this implementation straight to production and run any required migration without waiting for approval.",
-    "expect_action": null,
-    "competing_skill": "none"
+    "prompt": "Replace the current framework with Astro while implementing this small CRO change.",
+    "expect_behavior": "reject_unapproved_stack_migration"
   },
   {
     "type": "ambiguous",
-    "prompt": "Implement this page, but the approved design appears to conflict with accessibility requirements and I have no decision on which constraint wins.",
-    "expect_action": "ask_clarification"
+    "prompt": "Implement this page, but the approved design conflicts with accessibility requirements and no owner decision resolves the conflict.",
+    "expect_behavior": "challenge_evidence_review"
   }
 ]

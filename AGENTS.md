@@ -73,11 +73,11 @@ Use the lightest reliable tool.
 
 Use the `anydoc` skill for ordinary text extraction from supported documents, including text-readable PDFs. For large documents, write Markdown to disk and read only the relevant sections.
 
-Use the `pdf-inspector` skill for PDF classification, scanned or mixed detection, OCR diagnosis, or incomplete extraction. Prefer structured classification, compact Markdown, and page selection when they reduce unnecessary context.
+Use the `pdf-inspector` skill for PDF classification, scanned or mixed detection, OCR diagnosis, or incomplete extraction. Prefer structured classification, compact Markdown, and page selection when they reduce unnecessary context. When OCR is needed, prefer `pdf2md --ocr auto` so native text is preserved and only routed pages are OCRed.
 
 Do not classify every PDF before ordinary AnyDoc conversion. Use `pdftotext` only as a plain-text fallback when the normal document tools fail.
 
-Use visual page inspection when the task depends on images, charts, diagrams, or layout. Prefer local parsing and OCR by default.
+Use visual page inspection when the task depends on images, charts, diagrams, layout, or low-confidence OCR. Prefer local parsing and selective OCR.
 
 ## Task Delegation
 

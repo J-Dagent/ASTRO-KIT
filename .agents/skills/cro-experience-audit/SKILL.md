@@ -1,45 +1,42 @@
 ---
 name: cro-experience-audit
-description: Audit client landing-page and funnel conversion experiences using the supplied COO CRO methods, traffic-intent routing, CRM-quality evidence, and the supplied CRO masterclass heuristics. Use for CRO diagnosis, message-match audits, form/friction analysis, paid-traffic LP reviews, and prioritizing the next 1–3 experiments. Do NOT use for implementing code, building media campaigns, inventing proof, or declaring business winners without downstream evidence.
+description: Diagnose landing-page and funnel conversion experiences from traffic intent, message match, behavioral evidence, funnel data, and downstream business quality. Use for CRO audits, form/friction analysis, paid or organic landing-page reviews, and prioritizing the next 1–3 evidence-backed experiments. Do not implement code, build media campaigns, invent proof, or declare winners without the agreed evidence.
 ---
 
-# Cro Experience Audit
+# CRO Experience Audit
 
-## Action router
+## Workflow
 
-| # | Action | Role |
-|---|---|---|
-| 01 | `ingest-evidence` | Normalize the evidence set without inventing missing business context. |
-| 02 | `classify-traffic-and-page` | Classify traffic intent, page type, funnel stage and conversion action before judging tactics. |
-| 03 | `audit-message-match` | Audit promise and expectation continuity across acquisition, page, form and next step. |
-| 04 | `audit-conversion-architecture` | Audit page hierarchy, action accessibility, proof, objections, mobile and performance using context-sensitive heuristics. |
-| 05 | `audit-form-and-friction` | Evaluate form placement, field justification, step count, quiz/booking friction and downstream quality impact. |
-| 06 | `prioritize-opportunities` | Rank only the highest-leverage changes using business impact, confidence, evidence and effort. |
-| 07 | `design-experiments` | Turn eligible opportunities into bounded experiments with measurement and decision rules. |
-| 08 | `route-handoff` | Route the next work to the correct owner/skill without implementing it. |
+1. Inventory current evidence and freshness. Separate observed facts, owner decisions, generic heuristics, and inference. Mark missing evidence instead of filling it.
+2. Classify acquisition intent, page/funnel stage, conversion goal, and expected commitment before judging tactics.
+3. Trace message continuity through acquisition promise → page → form/CTA → thank-you/follow-up → sales reality when evidence exists.
+4. Audit conversion architecture, form/friction, proof, objections, mobile usability, and performance using context-sensitive heuristics.
+5. Prioritize only the highest-leverage 1–3 opportunities using business impact, evidence confidence, reversibility, and effort.
+6. When evidence supports testing, define bounded experiments with hypothesis, variable, metric, downstream signal, minimum data, decision rule, rollback, and owner.
+7. Route implementation-ready changes to `cro-delivery-spec`; route activation, media, CRM, or measurement ownership elsewhere.
 
-## Default flow
+## Invariants
 
-Use the minimum actions required by the request. For a new end-to-end task, follow the table order unless repository evidence justifies skipping an action. Open only the references required for the active action.
-
-## Transversal rules
-
-- Treat CRM/business outcome as stronger evidence than raw LP conversion when available.
-- Apply masterclass tactics as context-sensitive hypotheses, not universal laws.
-- Preserve upstream strategy ownership; missing proof or decisions become NEEDS_EVIDENCE.
-- Return diagnosis and experiments, never implementation code.
+- Current first-party evidence and explicit owner decisions outrank generic heuristics.
+- Prefer downstream business truth over weaker frontend proxies when available: revenue/sales → qualified opportunity → booked/attended step → lead → engagement.
+- Treat channel names as context, not rules. Classify intent before applying page heuristics.
+- Friction may be valuable when it improves qualification, trust, attribution, operations, compliance, or sales quality.
+- Never invent testimonials, logos, results, guarantees, benchmarks, or unavailable proof.
+- Behavioral evidence diagnoses; controlled experiments and agreed decision rules establish causal winners.
+- Recommend at most 1–3 next experiments. Do not redesign everything because many medium issues exist.
+- Return diagnosis and handoff, never implementation code.
 
 ## References
 
-- `references/method-provenance.md`
-- `references/coo-cro-principles.md`
-- `references/masterclass-cro-heuristics.md`
-- `references/orchestration-boundaries.md`
-- `references/traffic-context-routing.md`
-- `references/audit-rubric.md`
-- `references/experiment-principles.md`
-- Default asset/template: `assets/cro-audit.template.md`
+- `references/principles.md` for evidence precedence, traffic intent, useful friction, and ownership boundaries.
+- `references/heuristics.md` for context-sensitive CRO mechanisms.
+- `references/rubric.md` for finding structure and severity.
+- `references/experiments.md` when proposing tests.
+
+## Output
+
+Use `assets/cro-audit.template.md` or an equivalent structure with explicit status, evidence, diagnosis, next experiments, owner, and blockers.
 
 ## Validation
 
-Every action contains a concrete `## Test`. Before declaring completion, run the relevant executable checks and evaluate the scenarios in `evals/scenarios.json`.
+Run `node scripts/validate-audit.mjs <audit.md>` when using the bundled template, then `node scripts/validate-skill.mjs`. Evaluate `evals/scenarios.json`.

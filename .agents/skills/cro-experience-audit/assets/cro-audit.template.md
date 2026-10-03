@@ -1,25 +1,25 @@
 # CRO_AUDIT
 
-Status:
+Status: NEEDS_EVIDENCE
 Traffic context:
-Page type:
+Page/funnel stage:
 Conversion goal:
 Evidence used:
 
 ## Diagnosis
-| Priority | Issue | Evidence | Severity | Mechanism | Recommended change | Test | Measurement | Owner |
-|---|---|---|---|---|---|---|---|---|
+| Priority | Issue | Evidence | Severity | Mechanism | Recommended change | Measurement | Owner |
+|---|---|---|---|---|---|---|---|
 
 ## Message Match
-Query/ad promise:
+Acquisition promise:
 Page promise:
-Form expectation:
+Form/CTA expectation:
 Follow-up expectation:
 Mismatch severity:
 
 ## Next Experiments
-| # | Hypothesis | Variable | Primary KPI | CRM/business signal | Minimum data | Decision rule |
-|---|---|---|---|---|---|---|
+| # | Hypothesis | Variable | Primary KPI | Business signal | Minimum data | Decision rule | Rollback | Owner |
+|---|---|---|---|---|---|---|---|---|
 
 ## Handoff
 Next owner/skill:

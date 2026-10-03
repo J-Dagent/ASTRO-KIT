@@ -1,12 +1,7 @@
-# Optional design context
+# Design context
 
-If a project-level `DESIGN.md` exists, read it as a visual constraint and design-system context. If it does not exist, use the repository's existing design system, Shadcn/Tailwind tokens, and local component patterns.
+Use explicit design documentation when present. Otherwise inspect the repository's existing tokens, styles, components/templates, spacing, typography, interaction patterns, and accessibility conventions.
 
-Open Design is optional. Do not require its daemon, package, CLI, frontmatter, or design-system package for this skill to work.
+Do not introduce a new UI library or design system simply because it is familiar. Preserve the local visual language unless the approved contract explicitly changes it.
 
-Design context must never redefine:
-- the form data contract;
-- attribution;
-- consent;
-- persistence;
-- n8n/server-side tracking contracts.
+Design choices may affect layout, hierarchy, responsive behavior, component composition, and interaction presentation. They must not silently redefine form data, attribution, consent, persistence, delivery, experiment identity, or measurement contracts.
