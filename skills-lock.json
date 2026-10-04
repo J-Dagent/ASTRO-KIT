@@ -5,7 +5,7 @@
       "source": "vercel-labs/agent-browser",
       "sourceType": "github",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "computedHash": "80161e6836b3b40f4e83730a290deb40ac14d877d38c97ad5f6d71be37ce74c3"
+      "computedHash": "dd491d53824ad9286ec950aee667098446332429a6d41fe28b4ba11f1959264c"
     },
     "blast-radius": {
       "source": "cursor/plugins",
@@ -14,7 +14,7 @@
       "commit": "46125561306434d8a1d7745d540d8932ab0cd2a2",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "b060df3ca85803eabbce9fab53f5cc024ca8d784bdde5513c1c1a784947523f8"
+      "computedHash": "253fc07b07ca5e2f291251ee896bd36b6c9ba5da9e8a9e397d02dbb92dad8ca3"
     },
     "code-review": {
       "source": "mattpocock/skills",
@@ -23,7 +23,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50"
+      "computedHash": "caa9a086baaf9e0f7cd71f64edfa83da6821c05e826b083221f3d02e3d6a1905"
     },
     "codebase-design": {
       "source": "mattpocock/skills",
@@ -32,7 +32,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2"
+      "computedHash": "5a17552cc1482f1a40124bf4e6c9dbd90ac0dbb47e71c07d47369f9e5f2ae3b5"
     },
     "create-prd": {
       "source": "project-local",
@@ -41,35 +41,35 @@
       "version": "2.0.0",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "c17f47f0cb85ae4abeb77bb594a4e8c123010d18cee2537cb2de8565a65129b4"
+      "computedHash": "bf2b6867447623e62c6317b115e232adf42e0175b48b3c41f6ea728ce0248765"
     },
     "cro-delivery-spec": {
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/cro-delivery-spec/SKILL.md",
       "syncedAt": "2026-08-23",
-      "computedHash": "8097cf366dd5958156ad7a2031f467ea332c284e2e7f78e6fcd4d44c99fcd050"
+      "computedHash": "d249b084a2682b8588b98a69cbd50bf9885e6b4fb879e2a80594925e83feb721"
     },
     "cro-experience-audit": {
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/cro-experience-audit/SKILL.md",
       "syncedAt": "2026-08-23",
-      "computedHash": "acb1e06f23a81ece9f28c82c047c511d586052e405ab1fa04a885d3c7646153a"
+      "computedHash": "330e5ee930617190e9491cf116c140628541adbe1049d6503c085f9e78c4c7f5"
     },
     "cro-web-implement": {
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/cro-web-implement/SKILL.md",
       "syncedAt": "2026-08-23",
-      "computedHash": "fb76e4f44535342d4b41edfd2392a9644f3102e59866acce8d3553b5482f8abf"
+      "computedHash": "cc4ddc992a8c147d1441e4f479c0822861f8fc70b5a86d959958378e7900a56a"
     },
     "cro-web-validate": {
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/cro-web-validate/SKILL.md",
       "syncedAt": "2026-08-23",
-      "computedHash": "b3dbfcea270b0167fdf337bad9859804a301f4174fa3444636bacc238d9068b0"
+      "computedHash": "f427d1c167122ce7c2a37e43be2ab445601bf897fa09a86a2d69a51b555c94e0"
     },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
@@ -78,7 +78,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84"
+      "computedHash": "37b5e9c624513551da790b52864dc8c84bff996a6d03a380cc6facdcc0a88354"
     },
     "domain-modeling": {
       "source": "mattpocock/skills",
@@ -87,7 +87,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e"
+      "computedHash": "a11713c0ff7870efa3c331b2e273f09116158485246edc89ae5088eefd1b0b48"
     },
     "frontend-skill": {
       "source": "./existing project installation",
@@ -95,7 +95,7 @@
       "skillPath": ".agents/skills/frontend-skill/SKILL.md",
       "license": "Apache-2.0",
       "syncedAt": "2026-08-23",
-      "computedHash": "d367b2d22825d74c169475507e7ff109b81c1e9c20b2de3421fb19fcfbe3329b"
+      "computedHash": "2074b8fa089e7ac633689b7202965513a5fd069fd1baf2ea49a928bb85bb4c9c"
     },
     "grill-with-docs": {
       "source": "mattpocock/skills",
@@ -104,7 +104,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+      "computedHash": "35e62aa423aaeab6a414bcac273f56dfb17802ef2334b41b6a3b00f28196c8cf"
     },
     "grilling": {
       "source": "mattpocock/skills",
@@ -113,7 +113,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2"
+      "computedHash": "4dd886b0196bf43729d954ae326016f2bd9f5f79d892500b407c33a753362f14"
     },
     "implement": {
       "source": "mattpocock/skills",
@@ -126,7 +126,7 @@
       "sourceType": "local",
       "skillPath": ".agents/skills/implement-forms/SKILL.md",
       "syncedAt": "2026-08-23",
-      "computedHash": "148214e1668bdbc8132c3d59bf2dec154d0265f96dcc63209706449e234e6d50"
+      "computedHash": "cc4ccca678fa190752852154a413a8ecb766c7e73456927c831934966b5359cc"
     },
     "improve": {
       "source": "shadcn/improve",
@@ -135,7 +135,7 @@
       "commit": "03369ee6d7cafbfcecc4346539b05b3dc0a603bb",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "1599aa29e9b16424cb767779efac53fa56e3f38be92dff4ac587393a1ad5070a"
+      "computedHash": "39a9358732dcff385e9e4d3e60b4547856f834e54a58b35e455aa9bd49928c13"
     },
     "improve-animations": {
       "source": "emilkowalski/skills",
@@ -144,7 +144,7 @@
       "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "68f17bbc4671593d2f43dba26a679243e2153ba5f26965fb7d59df52842534ff"
+      "computedHash": "eeb219a407e325b687af88db25771cc3018e3148245604112f5ac6990b6fd79c"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
@@ -153,7 +153,14 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75"
+      "computedHash": "2449db6ab1ded9581f69fcc56c1f64818112d05e271fd4c5da23c6523f9d3d9d"
+    },
+    "project-setup-guide": {
+      "source": "project-local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/project-setup-guide/SKILL.md",
+      "syncedAt": "2026-10-04",
+      "computedHash": "8fae13516528024d90f62b11681ab9fd72dd03adde483d8bc0273d2e9e7a5583"
     },
     "review-animations": {
       "source": "emilkowalski/skills",
@@ -162,7 +169,7 @@
       "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "61cf8ac0c4c8e1f63385298c546b16c65ca9aec34abddcd04e821c16712d671d"
+      "computedHash": "b9f669af5ae280c19a592a94611520335a81de25c88f225bf60ae4b2d66c8c7c"
     },
     "setup-matt-pocock-skills": {
       "source": "mattpocock/skills",
@@ -177,7 +184,7 @@
       "commit": "1773ecfeeb4a04366978d353e69b5c7ded78dcb2",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "deba6c5152d9835892fa7dffeb1fedbb689ddac7e59e14e57ec5eaf9463309e4"
+      "computedHash": "c1a68ee06a668aced9ab2b5fbdea5f989864123794eb2e056b339a072dbb7f10"
     },
     "tdd": {
       "source": "mattpocock/skills",
@@ -203,7 +210,7 @@
       "skillPath": ".agents/skills/web-quality-audit/SKILL.md",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "aaada64b636b867d737dfd488fd947a7ca5c280983caf3b96b8915e08ad7ef01"
+      "computedHash": "1168be21aa9fe7bdc6e6e053ca05b6ca5a45675a527c103cdf77bc56ce8159af"
     },
     "writing-for-agents": {
       "source": "mattpocock/skills",
@@ -212,7 +219,7 @@
       "commit": "5b15a47f2d7150f545fbcacbfe381787fc0230dc",
       "license": "MIT",
       "syncedAt": "2026-08-23",
-      "computedHash": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a"
+      "computedHash": "95da47fc97af998e85b7d7e6d57b3ac76727c1e290cfe9ea09005aacb826959f"
     }
   }
 }
