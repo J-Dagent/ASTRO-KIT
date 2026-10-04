@@ -1,0 +1,3 @@
+interface:
+  display_name: "Project Setup Guide"
+  short_description: "Set up database, Drizzle, Better Auth, and project environment safely."
