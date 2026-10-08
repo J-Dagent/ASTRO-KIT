@@ -6,7 +6,8 @@ The JSON templates are the exact machine-checkable shape. Keep prose here to sem
 
 Use `assets/form-definition.template.json` as the baseline. Required concepts are:
 - stable `key` and `version`;
-- page identity/version and location;
+- page identity/version;
+- configurable path and placement;
 - `conversion_event`;
 - contact configuration;
 - dynamic `fields`;
@@ -14,7 +15,9 @@ Use `assets/form-definition.template.json` as the baseline. Required concepts ar
 - success behavior;
 - optional quiz configuration.
 
-`pattern` is descriptive, not an architecture switch. Existing examples for guide, quiz, and programme flows are presets, not an exhaustive enum.
+Default contact identity is `first_name` + `last_name` + `email`. Use `name_mode: "full_name"` only when a single-name field is explicitly preferred. Other contact fields remain configurable.
+
+`pattern` is descriptive, not an architecture switch. Generic, guide, quiz, and programme examples are presets, not an exhaustive enum. No pattern owns a route or page section.
 
 Business-specific fields belong in `fields` or quiz data unless they are proven canonical domain fields.
 
@@ -47,8 +50,9 @@ Do not infer consent from the mere presence of tracking identifiers.
 
 ## Form presets
 
+- Generic: reusable contact/capture form with arbitrary business fields.
 - Guide/contact: contact plus optional qualification fields.
 - Quiz: arbitrary answer IDs and outputs remain dynamic.
 - Programme: programme/campus/intake/funding/message fields remain dynamic unless the domain model says otherwise.
 
-Preserve existing production routes when migrating a form.
+Preserve existing production routes and placement when migrating or modifying a form.

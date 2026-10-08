@@ -37,7 +37,11 @@ function validateConsent(c, path = 'consent') {
 if (kind === 'form') {
   ['key','version','pattern','page','conversion_event','contact','fields','consent','attribution','success'].forEach((k) => req(data, k));
   if (data.page) keys(data.page, ['key','version'], 'page');
-  if (data.contact && !['full_name','first_last'].includes(data.contact.name_mode)) errors.push('contact.name_mode must be full_name|first_last');
+  if (data.contact) {
+    if (!['full_name','first_last'].includes(data.contact.name_mode)) errors.push('contact.name_mode must be full_name|first_last');
+    if (data.contact.name_mode === 'first_last') keys(data.contact, ['first_name','last_name','email'], 'contact');
+    if (data.contact.name_mode === 'full_name') keys(data.contact, ['full_name','email'], 'contact');
+  }
   if (!Array.isArray(data.fields)) errors.push('fields must be an array');
   if (data.pattern === 'quiz' && (!data.quiz || typeof data.quiz !== 'object')) errors.push('quiz pattern requires quiz object');
   if (data.quiz != null && typeof data.quiz !== 'object') errors.push('quiz must be null or an object');

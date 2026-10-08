@@ -40,5 +40,23 @@
     "prompt": "Create the lead form for this page. The desired fields and success behavior are not specified and cannot be inferred from the repo.",
     "must": ["ask only for missing product requirements"],
     "must_not": ["invent business fields", "invent success semantics"]
+  },
+  {
+    "name": "generic-form-flexible-path-placement",
+    "prompt": "Add a standard contact form to /pricing inside the existing comparison section. Do not create or move it into a Hero.",
+    "must": ["use configurable path", "preserve requested section placement", "reuse existing design system", "default first_name last_name email"],
+    "must_not": ["force preset route", "create Hero", "move form to Hero"]
+  },
+  {
+    "name": "full-name-alternative",
+    "prompt": "Modify this existing form so it uses one Full name field instead of separate first and last name fields, without changing its backend or tracking.",
+    "must": ["use full_name alternative", "preserve backend", "preserve attribution consent conversion idempotency"],
+    "must_not": ["force first_last", "rewrite persistence", "change tracking contract"]
+  },
+  {
+    "name": "modify-existing-form",
+    "prompt": "Change one qualification field on this existing lead form and keep every other behavior unchanged.",
+    "must": ["inspect existing form", "preserve contracts and delivery", "preserve path and placement", "modify only requested field"],
+    "must_not": ["redesign form", "change route", "replace backend"]
   }
 ]

@@ -1,11 +1,11 @@
 {
-  "key": "<guide_form_key>",
+  "key": "<form_key>",
   "version": "<form_version>",
-  "pattern": "guide",
+  "pattern": "generic",
   "path": "<configurable_path>",
-  "location": "hero",
+  "location": "<configurable_location>",
   "page": {
-    "key": "<guide_page_key>",
+    "key": "<page_key>",
     "version": "<page_version>"
   },
   "conversion_event": "<conversion_event>",
@@ -21,15 +21,15 @@
       "required": true
     },
     "phone": {
-      "required": true
+      "required": false
     }
   },
   "fields": [
     {
-      "key": "<qualification_field>",
-      "type": "radio",
+      "key": "<business_field>",
+      "type": "<field_type>",
       "required": false,
-      "purpose": "<approved qualification purpose>",
+      "purpose": "<business purpose>",
       "options": []
     }
   ],
@@ -43,6 +43,6 @@
     "profile": "<attribution_profile>"
   },
   "success": {
-    "redirect_to": "<guide_thank_you_path>"
+    "redirect_to": "<thank_you_path>"
   }
 }

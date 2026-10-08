@@ -2,7 +2,7 @@
   "key": "<quiz_form_key>",
   "version": "<form_version>",
   "pattern": "quiz",
-  "path": "/quiz",
+  "path": "<configurable_path>",
   "location": "hero",
   "page": {
     "key": "<quiz_page_key>",
@@ -10,8 +10,11 @@
   },
   "conversion_event": "<conversion_event>",
   "contact": {
-    "name_mode": "full_name",
-    "full_name": {
+    "name_mode": "first_last",
+    "first_name": {
+      "required": true
+    },
+    "last_name": {
       "required": true
     },
     "email": {

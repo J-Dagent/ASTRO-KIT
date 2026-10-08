@@ -25,6 +25,8 @@ Direct client-to-backend submission is acceptable when that backend function is 
 
 ## UI
 
-Reuse the repository's component system, form library, validation style, accessibility patterns, and route conventions. Do not migrate frameworks or design systems to implement a form.
+Reuse the repository's component system, form library, validation style, accessibility patterns, route conventions, and design system. Do not migrate frameworks or design systems to implement a form.
+
+Use the requested or existing path and section. If placement is unspecified, Hero may be proposed when it fits the page, but never create a Hero only to host the form.
 
 Keep view structure flexible. The invariants live in the contracts and trusted submission path, not component names.

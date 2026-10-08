@@ -18,7 +18,7 @@ const skill = read('SKILL.md');
 const lines = skill.trimEnd().split(/\r?\n/).length;
 if (lines < 40 || lines > 60) errors.push(`SKILL.md must be 40-60 lines, found ${lines}`);
 
-for (const term of ['FormDefinition','CanonicalLeadSubmission','attribution','consent','idempotency','trusted server boundary','Secrets']) {
+for (const term of ['FormDefinition','CanonicalLeadSubmission','attribution','consent','idempotency','trusted server boundary','Secrets','first_name','last_name','full_name']) {
   const haystack = skill + '\n' + requiredRefs.map((f) => read(`references/${f}`)).join('\n');
   if (!haystack.toLowerCase().includes(term.toLowerCase())) errors.push(`missing invariant term: ${term}`);
 }
@@ -42,6 +42,7 @@ for (const file of textFiles) {
 
 for (const p of [
   'assets/form-definition.template.json',
+  'assets/generic-form-definition.example.json',
   'assets/canonical-lead-submission.template.json',
   'assets/delivery-payload.template.json',
   'assets/environment-manifest.template.json',
