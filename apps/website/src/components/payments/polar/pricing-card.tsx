@@ -29,7 +29,7 @@ export function PricingCard({
     if (!price) {
       return "Prix indisponible";
     }
-    if (price.type !== "recurring") {
+    if (!product.isRecurring) {
       return "Devise non précisée";
     }
 
@@ -134,9 +134,9 @@ export function PricingCard({
       <CardContent>
         <div className="mb-6">
           <div className="text-3xl font-bold">{formatPrice(price)}</div>
-          {price?.type === "recurring" && (
+          {price && product.isRecurring && product.recurringInterval && (
             <div className="text-sm text-muted-foreground">
-              par {price.recurringInterval}
+              par {product.recurringInterval}
             </div>
           )}
         </div>

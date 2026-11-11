@@ -51,7 +51,7 @@ pnpm build
 pnpm test
 ```
 
-`pnpm test` runs the focused website tests for payment input validation and checkout polling state.
+`pnpm test` runs the focused website tests for payment input validation, checkout polling state, and pricing card rendering.
 
 ## Database helpers
 

@@ -1,6 +1,6 @@
 # Plan: Polar SDK 0.34.17 → 0.49.0, then 1.x
 
-Status: phase A ready to execute; phase B needs a product decision. Prepared 2026-11-11 on top of `chore/deps-p3-minor`.
+Status: phase A done on `fix/polar-sdk-0.49` (2026-11-11), except the manual sandbox check (step 5); phase B needs a product decision. Prepared 2026-11-11 on top of `chore/deps-p3-minor`.
 
 ## Why
 
