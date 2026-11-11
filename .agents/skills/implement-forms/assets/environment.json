@@ -1,0 +1,36 @@
+{
+  "framework_runtime": "<detected_framework_or_runtime>",
+  "backend_mode": "<postgres|convex>",
+  "trusted_intake": "<existing_trusted_boundary>",
+  "delivery_owner": "<existing_service|application_server|backend_function|automation|none|mixed>",
+  "persistence": {
+    "store_name": "<existing_or_convention_derived_name>",
+    "naming_source": "<existing_store|domain_glossary|repo_convention|asked>"
+  },
+  "required_configuration": [
+    {
+      "name": "<CONFIG_NAME>",
+      "classification": "<public|private|secret>",
+      "location": "<existing_runtime_or_secret_store>",
+      "required_when": "<condition>",
+      "status": "<present|missing|not_applicable>",
+      "reason": "<reason>"
+    }
+  ],
+  "new_configuration": [
+    {
+      "name": "<CONFIG_NAME>",
+      "classification": "<public|private|secret>",
+      "location": "<location>",
+      "reason": "<reason>",
+      "write_requires_approval": true
+    }
+  ],
+  "delivery": {
+    "adapter": "<existing_adapter|none>",
+    "resolved_secret_name": null,
+    "status": "<present|missing|not_applicable>",
+    "write_requires_approval": true
+  },
+  "notes": []
+}

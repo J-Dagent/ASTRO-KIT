@@ -5,7 +5,10 @@
       "source": "vercel-labs/agent-browser",
       "sourceType": "github",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "computedHash": "dd491d53824ad9286ec950aee667098446332429a6d41fe28b4ba11f1959264c"
+      "commit": "d129226078e0fc8ee5dec48fbc96a46df5d0aafd",
+      "license": "Apache-2.0",
+      "syncedAt": "2026-11-11",
+      "computedHash": "60a9cbe5af176150582c019e16e5d3703a41bb02d88438e881349876120d7944"
     },
     "blast-radius": {
       "source": "cursor/plugins",
@@ -43,33 +46,12 @@
       "syncedAt": "2026-08-23",
       "computedHash": "bf2b6867447623e62c6317b115e232adf42e0175b48b3c41f6ea728ce0248765"
     },
-    "cro-delivery-spec": {
+    "cro-conversion": {
       "source": "project-local",
       "sourceType": "local",
-      "skillPath": ".agents/skills/cro-delivery-spec/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "d249b084a2682b8588b98a69cbd50bf9885e6b4fb879e2a80594925e83feb721"
-    },
-    "cro-experience-audit": {
-      "source": "project-local",
-      "sourceType": "local",
-      "skillPath": ".agents/skills/cro-experience-audit/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "330e5ee930617190e9491cf116c140628541adbe1049d6503c085f9e78c4c7f5"
-    },
-    "cro-web-implement": {
-      "source": "project-local",
-      "sourceType": "local",
-      "skillPath": ".agents/skills/cro-web-implement/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "cc4ddc992a8c147d1441e4f479c0822861f8fc70b5a86d959958378e7900a56a"
-    },
-    "cro-web-validate": {
-      "source": "project-local",
-      "sourceType": "local",
-      "skillPath": ".agents/skills/cro-web-validate/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "f427d1c167122ce7c2a37e43be2ab445601bf897fa09a86a2d69a51b555c94e0"
+      "skillPath": ".agents/skills/cro-conversion/SKILL.md",
+      "syncedAt": "2026-11-11",
+      "computedHash": "7e2aea9718a0522d96faa1d869ff3d34fed475f10a7ce88e045a04dc6c0ff5bb"
     },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
@@ -125,8 +107,8 @@
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/implement-forms/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "cc4ccca678fa190752852154a413a8ecb766c7e73456927c831934966b5359cc"
+      "syncedAt": "2026-11-11",
+      "computedHash": "5755a2e17c856871b09d2b20a5d9487c187f3492729a936274e41ecc87c27271"
     },
     "improve": {
       "source": "shadcn/improve",
@@ -155,6 +137,15 @@
       "syncedAt": "2026-08-23",
       "computedHash": "2449db6ab1ded9581f69fcc56c1f64818112d05e271fd4c5da23c6523f9d3d9d"
     },
+    "mobile-native": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mobile-native/SKILL.md",
+      "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+      "license": "MIT",
+      "syncedAt": "2026-11-05",
+      "computedHash": "f221cea36642168df6d3d6d7f236237cbf1ae669138ff7df07775674223d49ad"
+    },
     "project-setup-guide": {
       "source": "project-local",
       "sourceType": "local",
@@ -181,10 +172,10 @@
       "source": "shadcn-ui/ui",
       "sourceType": "github",
       "skillPath": "skills/shadcn/SKILL.md",
-      "commit": "1773ecfeeb4a04366978d353e69b5c7ded78dcb2",
+      "commit": "2d3f1cd436b18ea12f24130de4df781355925b08",
       "license": "MIT",
-      "syncedAt": "2026-08-23",
-      "computedHash": "c1a68ee06a668aced9ab2b5fbdea5f989864123794eb2e056b339a072dbb7f10"
+      "syncedAt": "2026-11-11",
+      "computedHash": "da388f632cd83783c02967446e21941c9ee8291ccb43ba74c23f7d4e9b7c298c"
     },
     "tdd": {
       "source": "mattpocock/skills",

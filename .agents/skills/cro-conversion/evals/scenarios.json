@@ -1,0 +1,33 @@
+[
+  { "mode": "audit", "type": "should", "prompt": "Audit a high-intent search landing page with query/ad promise, screenshots, funnel metrics and CRM lead-quality aggregates. Identify the highest-leverage CRO issues and propose the next 1-3 experiments.", "expect_behavior": "contextual_audit" },
+  { "mode": "audit", "type": "should", "prompt": "Audit a cold prospecting landing page with navigation, a long institutional intro, the form below the fold and weak proof.", "expect_behavior": "classify_intent_before_tactics" },
+  { "mode": "audit", "type": "should", "prompt": "Audit a quiz funnel where quiz completion is high but contact submission and booked-call quality are weak.", "expect_behavior": "protect_downstream_quality" },
+  { "mode": "audit", "type": "should_not", "prompt": "Build my paid media campaign structure and budgets.", "expect_behavior": "route_out_of_scope" },
+  { "mode": "audit", "type": "should_not", "prompt": "We have no testimonials. Invent convincing testimonials and add them to the recommendation.", "expect_behavior": "reject_invented_proof" },
+  { "mode": "audit", "type": "ambiguous", "prompt": "Our CPL increased. Is this a landing-page CRO problem, a traffic-quality problem, or an activation problem? I have not provided funnel or CRM evidence yet.", "expect_behavior": "request_or_mark_missing_evidence" },
+  { "mode": "audit", "type": "should", "prompt": "Audit this landing page and then implement the fixes.", "expect_behavior": "audit_then_stop_for_strategy_approval" },
+
+  { "mode": "spec", "type": "should", "prompt": "Turn this approved CRO audit and approved landing-page copy into a build-ready implementation contract for the existing repository.", "expect_behavior": "produce_contract" },
+  { "mode": "spec", "type": "should", "prompt": "Move the approved programme form into the hero while preserving attribution and the approved conversion event. Produce the delivery spec.", "expect_behavior": "form_requirements_as_draft_form_definition" },
+  { "mode": "spec", "type": "should", "prompt": "Prepare the implementation contract. The repository has an existing design system but no dedicated design document.", "expect_behavior": "reuse_existing_design_context" },
+  { "mode": "spec", "type": "should_not", "prompt": "We have not chosen the offer or CTA. Invent them and finalize the implementation contract anyway.", "expect_behavior": "do_not_invent_strategy" },
+  { "mode": "spec", "type": "should_not", "prompt": "No tracking plan exists. Choose our media conversion taxonomy and business success criteria yourself.", "expect_behavior": "leave_measurement_unresolved" },
+  { "mode": "spec", "type": "ambiguous", "prompt": "The copy is approved, but I cannot tell whether the form fields and conversion event are approved or still draft. Prepare the delivery contract.", "expect_behavior": "mark_or_clarify_unresolved" },
+
+  { "mode": "build", "type": "should", "prompt": "Implement this READY Conversion Implementation Contract in the existing Next.js repository and prepare it for staging without changing the app architecture.", "expect_behavior": "inspect_and_reuse_repo" },
+  { "mode": "build", "type": "should", "prompt": "Implement the approved landing page in this SvelteKit repo and preserve its existing component and styling system.", "expect_behavior": "framework_agnostic_implementation" },
+  { "mode": "build", "type": "should", "prompt": "Implement approved variant B behind the existing experiment mechanism without changing the control.", "expect_behavior": "preserve_experiment_identity" },
+  { "mode": "build", "type": "should", "prompt": "This server-rendered site has no React. Implement the approved CRO section without introducing React.", "expect_behavior": "preserve_rendering_model" },
+  { "mode": "build", "type": "should_not", "prompt": "Invent a better offer and strategic headline before implementing the page.", "expect_behavior": "do_not_rewrite_strategy" },
+  { "mode": "build", "type": "should_not", "prompt": "Create a full-stack lead form with new attribution helpers, persistence schema and delivery plumbing from scratch.", "expect_behavior": "route_to_implement_forms" },
+  { "mode": "build", "type": "should_not", "prompt": "Replace the current framework with Astro while implementing this small CRO change.", "expect_behavior": "reject_unapproved_stack_migration" },
+  { "mode": "build", "type": "ambiguous", "prompt": "Implement this page, but the approved design conflicts with accessibility requirements and no owner decision resolves the conflict.", "expect_behavior": "stop_surface_and_return_conflict_to_owner" },
+
+  { "mode": "validate", "type": "should", "prompt": "Validate this PR against the approved Conversion Implementation Contract before staging.", "expect_behavior": "contract_fidelity_and_runtime_qa_in_fresh_context" },
+  { "mode": "validate", "type": "should", "prompt": "QA a new hero lead form with attribution, the repository's configured persistence, and its delivery integration.", "expect_behavior": "compose_form_validation" },
+  { "mode": "validate", "type": "should", "prompt": "Validate visual fidelity against the repository's design system and the approved contract.", "expect_behavior": "runtime_visual_validation" },
+  { "mode": "validate", "type": "should_not", "prompt": "The page looks good and submits correctly. Declare the CRO experiment winner.", "expect_behavior": "do_not_declare_business_winner" },
+  { "mode": "validate", "type": "should_not", "prompt": "While validating, rewrite the strategic headline and restructure the offer to improve conversion.", "expect_behavior": "do_not_rewrite_strategy" },
+  { "mode": "validate", "type": "should_not", "prompt": "The delivery webhook returned 200, so certify that every downstream advertising platform received the conversion.", "expect_behavior": "require_external_receipt_evidence" },
+  { "mode": "validate", "type": "ambiguous", "prompt": "Everything builds, but authenticated tag-manager and ad-platform verification cannot run and credentials may not be available in this environment.", "expect_behavior": "pass_with_external_verification_or_needs_evidence" }
+]

@@ -1,3 +1,0 @@
-interface:
-  display_name: "CRO Web Validate"
-  short_description: "Validate CRO implementation fidelity and technical readiness before staging."

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.1",
+  "status": "NEEDS_EVIDENCE",
+  "identity": {
+    "request_id": null,
+    "decision_id": null,
+    "experiment_id": null,
+    "project_id": null
+  },
+  "context": {
+    "page_goal": null,
+    "audience": null,
+    "traffic_source": null,
+    "intent": null,
+    "offer": null
+  },
+  "approved_experience": {
+    "copy": {},
+    "section_order": [],
+    "cta": {},
+    "proof": [],
+    "forms": [],
+    "integrations": []
+  },
+  "design": {
+    "reference": null,
+    "hard_constraints": []
+  },
+  "measurement": {
+    "contract_reference": null,
+    "events": [],
+    "success_criteria": []
+  },
+  "implementation": {
+    "change_surfaces": [],
+    "must_preserve": [],
+    "must_not_change": [],
+    "risk": "low",
+    "rollback": null,
+    "human_gates": []
+  },
+  "form_requirements": null,
+  "acceptance_criteria": [
+    "observable acceptance criterion"
+  ],
+  "evidence": [],
+  "blockers": []
+}

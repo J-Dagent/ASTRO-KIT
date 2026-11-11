@@ -10,7 +10,7 @@ await mkdir(claudeDir, { recursive: true });
 
 const canonicalEntries = await readdir(canonicalDir, { withFileTypes: true });
 const skills = canonicalEntries
-  .filter((entry) => entry.isDirectory())
+  .filter((entry) => entry.isDirectory() || entry.isSymbolicLink())
   .map((entry) => entry.name)
   .sort();
 const expected = new Set(skills);
