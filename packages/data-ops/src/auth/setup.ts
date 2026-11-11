@@ -10,7 +10,6 @@ export const createBetterAuth = (config: {
     database: config.database,
     secret: config.secret,
     baseURL: config.baseURL,
-    trustHost: true,
     emailAndPassword: {
       enabled: false,
     },

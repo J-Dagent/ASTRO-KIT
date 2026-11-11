@@ -1,6 +1,6 @@
 # Plan: Better Auth 1.6.34 → 1.7.20
 
-Status: ready to execute. Prepared 2026-11-11 on top of `chore/deps-p3-minor`.
+Status: done on `feat/better-auth-1.7` (2026-11-11), except step 1 (duplicate check on real data) and step 6 (Google sign-in on staging), which need database access and a deployment. Offline `auth generate` produced a schema identical to `auth-schema.ts`, so there is no migration. Prepared 2026-11-11 on top of `chore/deps-p3-minor`.
 Executor constraints: never run a database migration or deploy without explicit user approval (AGENTS.md).
 
 ## Why

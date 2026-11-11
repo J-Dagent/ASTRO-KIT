@@ -135,6 +135,8 @@ pnpm run better-auth:generate
 
 This creates `packages/data-ops/src/drizzle/auth-schema.ts` with your authentication tables
 
+> The CLI configuration passes the Drizzle adapter without a schema, because the schema is what it generates. The CLI may therefore log `Drizzle schema mismatch — Missing tables` before `Schema was generated successfully`. This message is expected during generation; the application passes the generated schema at runtime.
+
 ### 2. Generate Drizzle migrations
 
 ```bash
