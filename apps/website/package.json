@@ -24,7 +24,7 @@
     "@repo/data-ops": "workspace:^",
     "@tailwindcss/vite": "4.3.3",
     "astro": "7.4.10",
-    "better-auth": "1.6.29",
+    "better-auth": "1.6.34",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "highlight.js": "^11.11.1",
@@ -48,7 +48,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "typescript": "6.0.3",
-    "vitest": "^3.2.4",
+    "vitest": "^4.1.12",
     "wrangler": "4.160.0"
   }
 }

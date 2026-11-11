@@ -10,6 +10,13 @@ A reusable pnpm monorepo starter for multi-page marketing sites and landing page
 
 The default database path is Neon PostgreSQL through Drizzle's `neon-http` driver. Alternative relational provider examples remain intentional reference material.
 
+## Requirements
+
+- Node.js 26 (Active LTS), pinned in `.nvmrc`. The supported minimum is 22.23.4 (`engines.node`), the floor required by Astro 7.4.
+- pnpm through Corepack (`corepack enable`), which uses the version pinned in `packageManager`.
+
+Node.js only runs the tooling (build, dev, tests). Deployed code runs on Cloudflare's `workerd` runtime.
+
 ## Setup
 
 ```bash
