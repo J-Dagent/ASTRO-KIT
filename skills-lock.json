@@ -5,7 +5,10 @@
       "source": "vercel-labs/agent-browser",
       "sourceType": "github",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "computedHash": "dd491d53824ad9286ec950aee667098446332429a6d41fe28b4ba11f1959264c"
+      "commit": "d129226078e0fc8ee5dec48fbc96a46df5d0aafd",
+      "license": "Apache-2.0",
+      "syncedAt": "2026-11-11",
+      "computedHash": "60a9cbe5af176150582c019e16e5d3703a41bb02d88438e881349876120d7944"
     },
     "blast-radius": {
       "source": "cursor/plugins",
@@ -47,8 +50,8 @@
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/cro-conversion/SKILL.md",
-      "syncedAt": "2026-11-09",
-      "computedHash": "8982b03f0d2fe9114e3e139cf00c72877fed892b21f6cd03844cd47e292c0220"
+      "syncedAt": "2026-11-11",
+      "computedHash": "7e2aea9718a0522d96faa1d869ff3d34fed475f10a7ce88e045a04dc6c0ff5bb"
     },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
@@ -104,8 +107,8 @@
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/implement-forms/SKILL.md",
-      "syncedAt": "2026-11-09",
-      "computedHash": "d7850a8a500649711a61ad70e9bf081aa3d9886f4922d3c1c941ddcfb5d304d7"
+      "syncedAt": "2026-11-11",
+      "computedHash": "5755a2e17c856871b09d2b20a5d9487c187f3492729a936274e41ecc87c27271"
     },
     "improve": {
       "source": "shadcn/improve",
@@ -169,10 +172,10 @@
       "source": "shadcn-ui/ui",
       "sourceType": "github",
       "skillPath": "skills/shadcn/SKILL.md",
-      "commit": "1773ecfeeb4a04366978d353e69b5c7ded78dcb2",
+      "commit": "2d3f1cd436b18ea12f24130de4df781355925b08",
       "license": "MIT",
-      "syncedAt": "2026-08-23",
-      "computedHash": "c1a68ee06a668aced9ab2b5fbdea5f989864123794eb2e056b339a072dbb7f10"
+      "syncedAt": "2026-11-11",
+      "computedHash": "da388f632cd83783c02967446e21941c9ee8291ccb43ba74c23f7d4e9b7c298c"
     },
     "tdd": {
       "source": "mattpocock/skills",
