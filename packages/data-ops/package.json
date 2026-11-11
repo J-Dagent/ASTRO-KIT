@@ -35,7 +35,7 @@
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
     "@planetscale/database": "^1.19.0",
-    "better-auth": "1.6.34",
+    "better-auth": "1.7.20",
     "better-sqlite3": "^12.11.1",
     "drizzle-orm": "0.45.4",
     "zod": "4.6.7"
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "5.20261110.1",
     "@types/better-sqlite3": "^7.6.13",
-    "auth": "1.6.34",
+    "auth": "1.7.20",
     "drizzle-kit": "0.31.11",
     "mysql2": "^3.24.6",
     "postgres": "^3.4.7",

@@ -24,7 +24,7 @@
     "@repo/data-ops": "workspace:^",
     "@tailwindcss/vite": "4.3.5",
     "astro": "7.4.10",
-    "better-auth": "1.6.34",
+    "better-auth": "1.7.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "highlight.js": "^11.11.1",
