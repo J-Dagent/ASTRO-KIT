@@ -12,6 +12,12 @@
     "must_not": ["add PostgreSQL", "add ORM wrapper", "force extra server hop"]
   },
   {
+    "name": "store-name-from-project",
+    "prompt": "Add the first capture form to this CRM repository. Its glossary talks about Contacts and Opportunities and has no store for form submissions yet.",
+    "must": ["derive store name from glossary and repo conventions", "record store_name in environment manifest", "ask when two names stay plausible"],
+    "must_not": ["create a leads table by default"]
+  },
+  {
     "name": "quiz-dynamic-fields",
     "prompt": "Implement a multi-step quiz where question IDs and outputs change by client.",
     "must": ["keep answers and outputs dynamic", "reuse existing UI architecture", "canonical submission"],
@@ -22,6 +28,12 @@
     "prompt": "The repository already sends accepted leads through its own CRM service. Implement the form and preserve that delivery path.",
     "must": ["reuse existing delivery owner", "separate acceptance from delivery failure"],
     "must_not": ["introduce new automation platform"]
+  },
+  {
+    "name": "offline-conversion-ready",
+    "prompt": "Paid traffic comes from Google Ads and Meta. Sales will later mark contacts as qualified or won and we want those stages uploaded as offline conversions.",
+    "must": ["persist click IDs, event_id, server timestamp and consent with ad signals", "submission retrievable by id for later uploads", "hash normalized email and phone at send time", "send hashed user data only when ad consent allows it", "reuse event_id for browser/server dedup"],
+    "must_not": ["store only hashed contact", "upload without consent check", "fire conversion before server acceptance"]
   },
   {
     "name": "untrusted-request-metadata",
@@ -45,7 +57,7 @@
     "name": "generic-form-flexible-path-placement",
     "prompt": "Add a standard contact form to /pricing inside the existing comparison section. Do not create or move it into a Hero.",
     "must": ["use configurable path", "preserve requested section placement", "reuse existing design system", "default first_name last_name email"],
-    "must_not": ["force preset route", "create Hero", "move form to Hero"]
+    "must_not": ["force preset route", "create Hero", "move form to Hero", "require phone by default"]
   },
   {
     "name": "full-name-alternative",

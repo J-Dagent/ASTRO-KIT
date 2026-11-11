@@ -89,17 +89,17 @@ Delegate only when context isolation, parallelism, or throughput materially bene
 
 Plans produced by `improve` and `improve-animations` belong in `plans/`. Internal durable knowledge belongs in `docs/`; application-rendered technical documentation belongs in `apps/website/public/docs/` and remains in English.
 
-## CTO/CRO Routing
+## CRO Routing
 
-Start from the request's current maturity and invoke only the minimum skills required:
+Use `cro-conversion` for landing-page and funnel conversion work, in the mode that matches the request's maturity:
 
-- Undiagnosed CRO problem: `cro-experience-audit`.
-- Approved CRO recommendation without an implementation contract: `cro-delivery-spec`.
-- Ready `CONVERSION_IMPLEMENTATION_CONTRACT`: `cro-web-implement`.
-- Form-specific work: `implement-forms`; compose it with `cro-web-implement` when that implementation includes a form.
-- Completed implementation or QA-only request: `cro-web-validate`.
+- Undiagnosed conversion problem: `audit`.
+- Approved recommendation without an implementation contract: `spec`.
+- `READY` Conversion Implementation Contract: `build`, then `validate`.
+- Completed implementation or QA-only request: `validate`.
+- Form creation or changes to a form's data path (attribution, consent, intake, persistence, delivery, conversion): `implement-forms`, on its own or from `cro-conversion` `build`.
 
-Do not redo a `READY` decision, rerun an audit when a validated CRO decision exists, or regenerate a spec when a valid implementation contract exists. `implement-forms` is conditional, not a required stage. After CRO implementation, run `cro-web-validate`. Skills are capabilities; this file owns routing. Add no skill when this section can route the work.
+Resume from the latest valid artifact: a validated audit, an approved decision or a valid contract is reused, not redone. Skills are capabilities; this file owns routing. Add no skill when this section can route the work.
 
 ## Definition of Done
 

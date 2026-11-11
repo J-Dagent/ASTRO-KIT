@@ -1,3 +1,0 @@
-interface:
-  display_name: "CRO Delivery Spec"
-  short_description: "Turn approved CRO decisions into deterministic implementation contracts."

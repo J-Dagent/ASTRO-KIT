@@ -43,33 +43,12 @@
       "syncedAt": "2026-08-23",
       "computedHash": "bf2b6867447623e62c6317b115e232adf42e0175b48b3c41f6ea728ce0248765"
     },
-    "cro-delivery-spec": {
+    "cro-conversion": {
       "source": "project-local",
       "sourceType": "local",
-      "skillPath": ".agents/skills/cro-delivery-spec/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "d249b084a2682b8588b98a69cbd50bf9885e6b4fb879e2a80594925e83feb721"
-    },
-    "cro-experience-audit": {
-      "source": "project-local",
-      "sourceType": "local",
-      "skillPath": ".agents/skills/cro-experience-audit/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "330e5ee930617190e9491cf116c140628541adbe1049d6503c085f9e78c4c7f5"
-    },
-    "cro-web-implement": {
-      "source": "project-local",
-      "sourceType": "local",
-      "skillPath": ".agents/skills/cro-web-implement/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "cc4ddc992a8c147d1441e4f479c0822861f8fc70b5a86d959958378e7900a56a"
-    },
-    "cro-web-validate": {
-      "source": "project-local",
-      "sourceType": "local",
-      "skillPath": ".agents/skills/cro-web-validate/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "f427d1c167122ce7c2a37e43be2ab445601bf897fa09a86a2d69a51b555c94e0"
+      "skillPath": ".agents/skills/cro-conversion/SKILL.md",
+      "syncedAt": "2026-11-09",
+      "computedHash": "8982b03f0d2fe9114e3e139cf00c72877fed892b21f6cd03844cd47e292c0220"
     },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
@@ -125,8 +104,8 @@
       "source": "project-local",
       "sourceType": "local",
       "skillPath": ".agents/skills/implement-forms/SKILL.md",
-      "syncedAt": "2026-08-23",
-      "computedHash": "cc4ccca678fa190752852154a413a8ecb766c7e73456927c831934966b5359cc"
+      "syncedAt": "2026-11-09",
+      "computedHash": "d7850a8a500649711a61ad70e9bf081aa3d9886f4922d3c1c941ddcfb5d304d7"
     },
     "improve": {
       "source": "shadcn/improve",
@@ -154,6 +133,15 @@
       "license": "MIT",
       "syncedAt": "2026-08-23",
       "computedHash": "2449db6ab1ded9581f69fcc56c1f64818112d05e271fd4c5da23c6523f9d3d9d"
+    },
+    "mobile-native": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mobile-native/SKILL.md",
+      "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+      "license": "MIT",
+      "syncedAt": "2026-11-05",
+      "computedHash": "f221cea36642168df6d3d6d7f236237cbf1ae669138ff7df07775674223d49ad"
     },
     "project-setup-guide": {
       "source": "project-local",
