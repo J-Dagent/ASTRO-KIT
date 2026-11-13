@@ -5,19 +5,19 @@
       "source": "vercel-labs/agent-browser",
       "sourceType": "github",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "commit": "d129226078e0fc8ee5dec48fbc96a46df5d0aafd",
+      "commit": "2f533ec7d74cd9b1925cc86fb0c6872b03745be0",
       "license": "Apache-2.0",
-      "syncedAt": "2026-11-11",
-      "computedHash": "60a9cbe5af176150582c019e16e5d3703a41bb02d88438e881349876120d7944"
+      "syncedAt": "2026-11-13",
+      "computedHash": "13d4c36e4147478e4749ece397f7a37c7ed04cd2697d81f37ba3c241431e085f"
     },
     "blast-radius": {
       "source": "cursor/plugins",
       "sourceType": "github",
-      "skillPath": "pstack/skills/blast-radius/SKILL.md",
-      "commit": "46125561306434d8a1d7745d540d8932ab0cd2a2",
+      "skillPath": "harness/pstack/claude-code/skills/blast-radius/SKILL.md",
+      "commit": "05b49176bc9e00d8e9e3dbf136fa76631cd6468a",
       "license": "MIT",
-      "syncedAt": "2026-08-23",
-      "computedHash": "253fc07b07ca5e2f291251ee896bd36b6c9ba5da9e8a9e397d02dbb92dad8ca3"
+      "syncedAt": "2026-11-13",
+      "computedHash": "e59c40c6882599243a2988e8001e968d0e92ae982273ed3369eec58c4b956d30"
     },
     "code-review": {
       "source": "mattpocock/skills",
@@ -126,10 +126,10 @@
       "source": "emilkowalski/skills",
       "sourceType": "github",
       "skillPath": "skills/improve-animations/SKILL.md",
-      "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+      "commit": "0f2e23b32bb1265e84cff8d3e75785fec953fb1b",
       "license": "MIT",
-      "syncedAt": "2026-08-23",
-      "computedHash": "eeb219a407e325b687af88db25771cc3018e3148245604112f5ac6990b6fd79c"
+      "syncedAt": "2026-11-13",
+      "computedHash": "0ceb25784b6660c280a59dea039d9b5d56eb7dc54804dc1b6a908e47a9923f16"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
@@ -144,10 +144,10 @@
       "source": "emilkowalski/skills",
       "sourceType": "github",
       "skillPath": "skills/mobile-native/SKILL.md",
-      "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
+      "commit": "0f2e23b32bb1265e84cff8d3e75785fec953fb1b",
       "license": "MIT",
-      "syncedAt": "2026-11-05",
-      "computedHash": "f221cea36642168df6d3d6d7f236237cbf1ae669138ff7df07775674223d49ad"
+      "syncedAt": "2026-11-13",
+      "computedHash": "19a47e318bfcb2a1c2be346b79219758b296437800cc6226d2cb467233403d17"
     },
     "project-setup-guide": {
       "source": "project-local",
@@ -160,10 +160,10 @@
       "source": "emilkowalski/skills",
       "sourceType": "github",
       "skillPath": "skills/review-animations/SKILL.md",
-      "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+      "commit": "0f2e23b32bb1265e84cff8d3e75785fec953fb1b",
       "license": "MIT",
-      "syncedAt": "2026-08-23",
-      "computedHash": "b9f669af5ae280c19a592a94611520335a81de25c88f225bf60ae4b2d66c8c7c"
+      "syncedAt": "2026-11-13",
+      "computedHash": "5ff2799f778472c996f548b240cea5a519980f8fe41ffe9e92e17db655c596b2"
     },
     "setup-matt-pocock-skills": {
       "source": "mattpocock/skills",
@@ -178,10 +178,10 @@
       "source": "shadcn-ui/ui",
       "sourceType": "github",
       "skillPath": "skills/shadcn/SKILL.md",
-      "commit": "2d3f1cd436b18ea12f24130de4df781355925b08",
+      "commit": "e62c9435fff729a175f38983dee73b2cb4f6a069",
       "license": "MIT",
-      "syncedAt": "2026-11-11",
-      "computedHash": "da388f632cd83783c02967446e21941c9ee8291ccb43ba74c23f7d4e9b7c298c"
+      "syncedAt": "2026-11-13",
+      "computedHash": "b864a958765563321f485a96f4d59c0bb6539f4286ab6d8b8b66895b7ebd302d"
     },
     "tdd": {
       "source": "mattpocock/skills",
