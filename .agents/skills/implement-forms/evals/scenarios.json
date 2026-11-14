@@ -2,73 +2,176 @@
   {
     "name": "postgres-existing-stack",
     "prompt": "Implement a lead form in an existing repository backed by PostgreSQL. Reuse its current frontend, server boundary, ORM/query layer, migrations, attribution and design system.",
-    "must": ["inspect existing architecture", "reuse PostgreSQL data layer", "trusted server validation", "idempotent event_id"],
-    "must_not": ["replace framework", "replace ORM", "add Convex"]
+    "must": [
+      "inspect existing architecture",
+      "reuse PostgreSQL data layer",
+      "trusted server validation",
+      "idempotent event_id"
+    ],
+    "must_not": [
+      "replace framework",
+      "replace ORM",
+      "add Convex"
+    ]
   },
   {
     "name": "convex-native",
     "prompt": "Implement a programme lead form in a Convex application with attribution and downstream delivery.",
-    "must": ["native Convex validators/functions/indexes", "idempotent event_id", "dynamic business fields"],
-    "must_not": ["add PostgreSQL", "add ORM wrapper", "force extra server hop"]
+    "must": [
+      "native Convex validators/functions/indexes",
+      "idempotent event_id",
+      "dynamic business fields"
+    ],
+    "must_not": [
+      "add PostgreSQL",
+      "add ORM wrapper",
+      "force extra server hop"
+    ]
   },
   {
     "name": "store-name-from-project",
     "prompt": "Add the first capture form to this CRM repository. Its glossary talks about Contacts and Opportunities and has no store for form submissions yet.",
-    "must": ["derive store name from glossary and repo conventions", "record store_name in environment manifest", "ask when two names stay plausible"],
-    "must_not": ["create a leads table by default"]
+    "must": [
+      "derive store name from glossary and repo conventions",
+      "record store_name in environment manifest",
+      "ask when two names stay plausible"
+    ],
+    "must_not": [
+      "create a leads table by default"
+    ]
   },
   {
     "name": "quiz-dynamic-fields",
     "prompt": "Implement a multi-step quiz where question IDs and outputs change by client.",
-    "must": ["keep answers and outputs dynamic", "reuse existing UI architecture", "canonical submission"],
-    "must_not": ["column per answer", "hard-code client fields into canonical schema"]
+    "must": [
+      "keep answers and outputs dynamic",
+      "reuse existing UI architecture",
+      "canonical submission"
+    ],
+    "must_not": [
+      "column per answer",
+      "hard-code client fields into canonical schema"
+    ]
   },
   {
     "name": "existing-delivery-owner",
     "prompt": "The repository already sends accepted leads through its own CRM service. Implement the form and preserve that delivery path.",
-    "must": ["reuse existing delivery owner", "separate acceptance from delivery failure"],
-    "must_not": ["introduce new automation platform"]
+    "must": [
+      "reuse existing delivery owner",
+      "separate acceptance from delivery failure"
+    ],
+    "must_not": [
+      "introduce new automation platform"
+    ]
   },
   {
     "name": "offline-conversion-ready",
     "prompt": "Paid traffic comes from Google Ads and Meta. Sales will later mark contacts as qualified or won and we want those stages uploaded as offline conversions.",
-    "must": ["persist click IDs, event_id, server timestamp and consent with ad signals", "submission retrievable by id for later uploads", "hash normalized email and phone at send time", "send hashed user data only when ad consent allows it", "reuse event_id for browser/server dedup"],
-    "must_not": ["store only hashed contact", "upload without consent check", "fire conversion before server acceptance"]
+    "must": [
+      "persist click IDs, event_id, server timestamp and consent with ad signals",
+      "submission retrievable by id for later uploads",
+      "hash normalized email and phone at send time",
+      "send hashed user data only when ad consent allows it",
+      "reuse event_id for browser/server dedup"
+    ],
+    "must_not": [
+      "store only hashed contact",
+      "upload without consent check",
+      "fire conversion before server acceptance"
+    ]
   },
   {
     "name": "untrusted-request-metadata",
     "prompt": "Add hidden inputs for client IP and user agent and trust them as server attribution facts.",
-    "must": ["reject browser values as authoritative", "derive only from trusted boundary or mark unavailable"],
-    "must_not": ["trust hidden request metadata"]
+    "must": [
+      "reject browser values as authoritative",
+      "derive only from trusted boundary or mark unavailable"
+    ],
+    "must_not": [
+      "trust hidden request metadata"
+    ]
   },
   {
     "name": "secret-boundary",
     "prompt": "Expose database and delivery credentials to the browser so it can submit directly.",
-    "must": ["keep secrets at owning server/backend boundary"],
-    "must_not": ["public credentials", "browser delivery secret"]
+    "must": [
+      "keep secrets at owning server/backend boundary"
+    ],
+    "must_not": [
+      "public credentials",
+      "browser delivery secret"
+    ]
   },
   {
     "name": "ambiguous-form",
     "prompt": "Create the lead form for this page. The desired fields and success behavior are not specified and cannot be inferred from the repo.",
-    "must": ["ask only for missing product requirements"],
-    "must_not": ["invent business fields", "invent success semantics"]
+    "must": [
+      "ask only for missing product requirements"
+    ],
+    "must_not": [
+      "invent business fields",
+      "invent success semantics"
+    ]
   },
   {
     "name": "generic-form-flexible-path-placement",
     "prompt": "Add a standard contact form to /pricing inside the existing comparison section. Do not create or move it into a Hero.",
-    "must": ["use configurable path", "preserve requested section placement", "reuse existing design system", "default first_name last_name email"],
-    "must_not": ["force preset route", "create Hero", "move form to Hero", "require phone by default"]
+    "must": [
+      "use configurable path",
+      "preserve requested section placement",
+      "reuse existing design system",
+      "default first_name last_name email"
+    ],
+    "must_not": [
+      "force preset route",
+      "create Hero",
+      "move form to Hero",
+      "require phone by default"
+    ]
   },
   {
     "name": "full-name-alternative",
     "prompt": "Modify this existing form so it uses one Full name field instead of separate first and last name fields, without changing its backend or tracking.",
-    "must": ["use full_name alternative", "preserve backend", "preserve attribution consent conversion idempotency"],
-    "must_not": ["force first_last", "rewrite persistence", "change tracking contract"]
+    "must": [
+      "use full_name alternative",
+      "preserve backend",
+      "preserve attribution consent conversion idempotency"
+    ],
+    "must_not": [
+      "force first_last",
+      "rewrite persistence",
+      "change tracking contract"
+    ]
   },
   {
     "name": "modify-existing-form",
     "prompt": "Change one qualification field on this existing lead form and keep every other behavior unchanged.",
-    "must": ["inspect existing form", "preserve contracts and delivery", "preserve path and placement", "modify only requested field"],
-    "must_not": ["redesign form", "change route", "replace backend"]
+    "must": [
+      "inspect existing form",
+      "preserve contracts and delivery",
+      "preserve path and placement",
+      "modify only requested field"
+    ],
+    "must_not": [
+      "redesign form",
+      "change route",
+      "replace backend"
+    ]
+  },
+  {
+    "name": "linkedin-posthog-attribution",
+    "prompt": "Add a lead form to a LinkedIn Ads landing page. The site already runs PostHog after analytics consent.",
+    "must": [
+      "read li_fat_id from the URL, then the li_fat_id first-party cookie at submit",
+      "store LinkedIn campaign group, campaign and creative IDs from li_-prefixed URL parameters",
+      "store distinct_id, $session_id and $device_id under attribution.analytics.posthog, read from posthog-js only while it runs",
+      "project posthog_distinct_id, posthog_session_id and posthog_device_id, never a column holding $",
+      "replace the UTM set on a new touch and keep each click ID's last non-empty value"
+    ],
+    "must_not": [
+      "invent PostHog identifiers or names",
+      "call posthog.identify with contact data",
+      "persist attribution before the required consent"
+    ]
   }
 ]

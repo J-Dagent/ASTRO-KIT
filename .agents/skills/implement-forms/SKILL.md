@@ -1,6 +1,6 @@
 ---
 name: implement-forms
-description: Create or modify any production form in an existing repo: contact, guide, quiz, programme or custom capture. Covers attribution capture, consent, trusted server intake, idempotent persistence (PostgreSQL or Convex), delivery and conversion signals for browser and offline paths.
+description: "Create or modify any production form in an existing repo: contact, guide, quiz, programme or custom capture. Covers attribution capture, consent, trusted server intake, idempotent persistence (PostgreSQL or Convex), delivery and conversion signals for browser and offline paths."
 ---
 
 # Implement forms
@@ -10,7 +10,7 @@ Build the form inside the repository's existing architecture: its frontend, trus
 ## Steps
 
 1. **Inspect.** Read repo instructions, manifests, runtime config, existing forms, backend entry points, persistence, tracking and deployment config. Done when the five owners are named or recorded `none`: UI, trusted intake, persistence, delivery, configuration and secrets. See [references/backend.md](references/backend.md).
-2. **Define.** Reuse the existing form definition or start from `assets/form-definition.json`. Done when contact fields, business fields, consent, attribution, conversion event, path, placement and success behaviour are known. See [references/data.md](references/data.md).
+2. **Define.** Reuse the existing form definition or start from `assets/form-definition.json`. Done when contact fields, business fields, off-target exits, consent, attribution, conversion event, path, placement and success behaviour are known. See [references/data.md](references/data.md).
 3. **Build the UI.** Reuse the repo's components, form library, validation style, accessibility patterns and design system, at the requested path and section. Done when the interaction works with no unrequested design change.
 4. **Intake.** At the trusted boundary: revalidate input, normalize contact data, derive request metadata, create `event_id`, and build the submission from `assets/submission.json`. Done when nothing browser-supplied can overwrite a server-derived fact.
 5. **Persist.** Through the detected backend, in a store named after the project's conventions. Done when a retry with the same `event_id` cannot create a second accepted submission. See [references/backend.md](references/backend.md).
@@ -23,7 +23,7 @@ Build the form inside the repository's existing architecture: its frontend, trus
 - **Submission** (`CanonicalLeadSubmission`) is the one stable contract across backends and delivery adapters.
 - **`event_id`** is the idempotency key from persistence through every delivery and conversion signal.
 - **Trusted boundary**: IP, user agent and other request facts come only from server or backend context; otherwise they are recorded unavailable.
-- **Attribution and consent** are captured explicitly and re-captured at submit.
+- **Attribution and consent** are captured explicitly, under the platforms' and PostHog's native names, and re-captured at submit.
 - **Offline-ready**: every accepted submission keeps, retrievable by its id, what a later offline conversion upload needs: `event_id`, server timestamp, click IDs, consent state including ad signals, normalized contact, IP hash and user agent.
 - **Dynamic data**: client-specific fields and quiz answers and outputs live in `payload_json`, not in new columns, unless the domain model proves them canonical.
 - **Existing forms**: a modification keeps route, placement, contracts, tracking and delivery, and changes only what was asked.
