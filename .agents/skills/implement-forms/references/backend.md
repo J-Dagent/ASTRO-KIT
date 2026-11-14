@@ -15,7 +15,7 @@ Direct client-to-backend submission is fine when that backend function is author
 The submission store (table or collection) takes its name from the project:
 
 1. reuse the existing store that already holds form submissions;
-2. otherwise derive the name from the domain glossary (`CONTEXT.md`, ADRs, existing schema) and the repo's conventions for case, plural, prefix and schema;
+2. otherwise derive the name from the domain glossary (`GLOSSARY.md`, or the legacy `CONTEXT.md`, ADRs, existing schema) and the repo's conventions for case, plural, prefix and schema;
 3. when two names stay plausible, ask.
 
 Record the choice in `assets/environment.json` under `persistence`. The word "Lead" in contract names is a contract name, not a store name.
