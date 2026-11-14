@@ -68,6 +68,12 @@
       "placement": null,
       "device": null
     },
+    "linkedin": {
+      "li_fat_id": null,
+      "campaign_group_id": null,
+      "campaign_id": null,
+      "creative_id": null
+    },
     "tiktok": {
       "ttclid": null,
       "ttp": null,
@@ -78,10 +84,15 @@
       "device": null
     },
     "analytics": {
-      "posthog_distinct_id": null,
-      "posthog_session_id": null,
-      "ga_client_id": null,
-      "ga_session_id": null
+      "posthog": {
+        "distinct_id": null,
+        "$session_id": null,
+        "$device_id": null
+      },
+      "google_analytics": {
+        "client_id": null,
+        "session_id": null
+      }
     }
   },
   "consent": {
