@@ -24,14 +24,29 @@
   "gclid": null,
   "gbraid": null,
   "wbraid": null,
+  "google_campaign_id": null,
+  "google_ad_group_id": null,
+  "google_ad_id": null,
   "fbclid": null,
   "fbc": null,
   "fbp": null,
+  "meta_campaign_id": null,
+  "meta_ad_set_id": null,
+  "meta_ad_id": null,
   "ttclid": null,
   "ttp": null,
+  "tiktok_campaign_id": null,
+  "tiktok_ad_group_id": null,
+  "tiktok_ad_id": null,
+  "li_fat_id": null,
+  "li_campaign_group_id": null,
+  "li_campaign_id": null,
+  "li_creative_id": null,
   "landing_page_url": null,
   "referrer": null,
   "posthog_distinct_id": null,
+  "posthog_session_id": null,
+  "posthog_device_id": null,
   "payload_json": {
     "form": {
       "location": "<form_location>",
@@ -84,6 +99,12 @@
         "placement": null,
         "device": null
       },
+      "linkedin": {
+        "li_fat_id": null,
+        "campaign_group_id": null,
+        "campaign_id": null,
+        "creative_id": null
+      },
       "tiktok": {
         "ttclid": null,
         "ttp": null,
@@ -94,10 +115,15 @@
         "device": null
       },
       "analytics": {
-        "posthog_distinct_id": null,
-        "posthog_session_id": null,
-        "ga_client_id": null,
-        "ga_session_id": null
+        "posthog": {
+          "distinct_id": null,
+          "$session_id": null,
+          "$device_id": null
+        },
+        "google_analytics": {
+          "client_id": null,
+          "session_id": null
+        }
       }
     },
     "consent": {

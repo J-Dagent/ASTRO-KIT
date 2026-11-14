@@ -1,6 +1,6 @@
 ---
 name: cro-conversion
-description: CRO for landing pages and funnels, in four modes. audit: diagnose conversion and prioritize 1–3 experiments. spec: turn approved decisions into a Conversion Implementation Contract. build: implement a READY contract in the existing repo. validate: check an implementation against its contract before staging.
+description: "CRO for landing pages and funnels, in four modes. audit: diagnose conversion and prioritize 1–3 experiments. spec: turn approved decisions into a Conversion Implementation Contract. build: implement a READY contract in the existing repo. validate: check an implementation against its contract before staging."
 ---
 
 # CRO conversion
